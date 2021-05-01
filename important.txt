@@ -1,1 +1,0 @@
-public string[] personality = {"Openness to experience", "Self-Discipline", "Extrovert", "Agreeableness", "Short-Tempered"};
