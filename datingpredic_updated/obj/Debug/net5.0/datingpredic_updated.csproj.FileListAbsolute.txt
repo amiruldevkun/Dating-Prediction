@@ -1,0 +1,16 @@
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\bin\Debug\net5.0\datingpredic_updated.exe
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\bin\Debug\net5.0\datingpredic_updated.deps.json
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\bin\Debug\net5.0\datingpredic_updated.runtimeconfig.json
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\bin\Debug\net5.0\datingpredic_updated.runtimeconfig.dev.json
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\bin\Debug\net5.0\datingpredic_updated.dll
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\bin\Debug\net5.0\ref\datingpredic_updated.dll
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\bin\Debug\net5.0\datingpredic_updated.pdb
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\obj\Debug\net5.0\datingpredic_updated.csprojAssemblyReference.cache
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\obj\Debug\net5.0\datingpredic_updated.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\obj\Debug\net5.0\datingpredic_updated.AssemblyInfoInputs.cache
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\obj\Debug\net5.0\datingpredic_updated.AssemblyInfo.cs
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\obj\Debug\net5.0\datingpredic_updated.csproj.CoreCompileInputs.cache
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\obj\Debug\net5.0\datingpredic_updated.dll
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\obj\Debug\net5.0\ref\datingpredic_updated.dll
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\obj\Debug\net5.0\datingpredic_updated.pdb
+C:\Users\bruh\Desktop\VSC\C#\datingpredic_updated\obj\Debug\net5.0\datingpredic_updated.genruntimeconfig.cache
