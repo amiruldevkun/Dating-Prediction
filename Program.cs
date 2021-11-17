@@ -76,7 +76,7 @@ namespace datingpredic_updated
                 gender = "";
             }
         }
-        /* class meaning { //! NOT USABLE
+        /* class meaning { //! NOT USABLE 
             public string open; 
             public string discipline;
             public string extrovert;
@@ -138,7 +138,7 @@ namespace datingpredic_updated
             Person Boy = new Person();
             Person Girl = new Person();
             if(Boy.gender == "boy") {
-                //? This part is pretty complicated...
+                //* This part is pretty complicated... OH WHO AM I KIDDING!
                 Console.Write("Enter your name in : ");
                 Boy.name = Console.ReadLine();
                 while (string.IsNullOrEmpty(Boy.name)) { //? This checks if the input is empty.
