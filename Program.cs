@@ -19,12 +19,14 @@ namespace datingpredic_updated
         static void Main(string[] args)
         {
             //* New sub-classes
+
             user user = new user();
             crush crush = new crush();
             Person Boy = new Person();
             Person Girl = new Person();
-            meaning bruh = new meaning();
+            
             //* Actual program starts here
+
             Console.Write("Enter your gender : ");
             var gender = Console.ReadLine();
             while (string.IsNullOrEmpty(gender)) {
@@ -42,7 +44,6 @@ namespace datingpredic_updated
             //! DEBUGGING AND CALLING SECTION (USE THIS WHEN NEW FUNCTIONS IS MADE & WANTED TO BE CALLED)
             //user.check();
             //crush.check();
-            bruh.meanings(); 
             Console.ReadKey();
 
             /**
@@ -75,7 +76,7 @@ namespace datingpredic_updated
                 gender = "";
             }
         }
-        class meaning { //! STILL EXPANDING
+        /* class meaning { //! NOT USABLE
             public string open; 
             public string discipline;
             public string extrovert;
@@ -131,7 +132,7 @@ namespace datingpredic_updated
             }
             }
         }
-        class user { //! ADDING NEW FUNCTIONS
+        */ class user { //! ADDING NEW FUNCTIONS
         
             public void check() {
             Person Boy = new Person();
