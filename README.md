@@ -37,5 +37,4 @@ If you need help you can tag me on twitter or dm me, since i dont have anyone wi
 ### RESOURCES
 https://github.com/amiruldevkun/datingpredictions
 https://dotnet.microsoft.com/download/dotnet/5.0
-
 https://twitter.com/amirulplays
