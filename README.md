@@ -1,0 +1,33 @@
+# DATING PREDICTIONS (C# VERSION)
+A dating prediction cli script i've made on my free time 
+
+## Why did i make this?
+Because i was dumb and wanted to do something in my free time. Its not useful in anykind, but feel free to try it out i guess. Its not accurate by any chance, so if you value your integrity and don't want to embarrass your self, please step away. But, if you want to contribute, you can! I'll tell you later, read more of this. :point_down:
+
+## How to get the script
+So, you decided to grab the script still eh? Alright, first if you have git, do 
+```
+git clone https://github.com/amiruldevkun/datingprediction_updated
+```
+
+Then, wait until it has done cloning. After that, you will have to go to bin/Debug/net5.0, and run the exe file. You might need the (dot)net sdk to run it but im sure its fine. Another way to get the script is to use the **BIG** green button on the top called CODE. Click it and download the zip. Unzip the file and go to the file location, and run the exe file and boom, its running. Just keep in mind this is __UNPOLISHED__ and __WILL__ have bugs. If thats the case, shoot me a dm through twitter cuz thats the only place i have dms open.
+
+## BUILDING
+Ok, so you have decided to not do it the easy way huh and wanted to build it yourself. So, these are the prerequisites.
+
+- The [.net sdk (Version 5)](https://dotnet.microsoft.com/download/dotnet/5.0)
+- A text editor just in case
+- Git 
+
+After you have buckled up with the prerequisites that i have stated, open the command line, and clone this repo anywhere reachable. Then open or change directory in your cmd and type `dotnet build` and let it build. After that, go to bin/Debug/net5.0 and run the exe file. And your done! 
+
+## CONTRIBUTING
+If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED__ only as i dont want to waste my free time going through edgy and weird code pulls all day when i have school. Fork this repo if you want, but please point back to this repo. I will put your name in the script to show the people contributed to this cli script.
+
+## HELP INQUIRES 
+If you need help you can tag me on twitter or dm me, since i dont have anyone with perms to keep the repo going, i might not respond fast so keep that in mind.
+twitter.com/amirulplays
+
+## RESOURCES
+https://github.com/amiruldevkun/datingpredictions
+https://dotnet.microsoft.com/download/dotnet/5.0
