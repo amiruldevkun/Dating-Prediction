@@ -1,8 +1,8 @@
 # DATING PREDICTIONS (C# VERSION)
-A dating prediction cli script i've made on my free time 
+A dating prediction cli script to see if you have a chance with the person that catches your eye.
 
 ## Why did i make this?
-Because i was dumb and wanted to do something in my free time. Its not useful in anykind, but feel free to try it out i guess. Its not accurate by any chance, so if you value your integrity and don't want to embarrass your self, please step away. But, if you want to contribute, you can! I'll tell you later, read more of this. :point_down:
+Because i was bored and wanted to do something in my free time. Its not useful in anykind, but feel free to try it out i guess. Its not accurate by any chance, so if you value your integrity and don't want to embarrass your self, please step away. But, if you want to contribute, you can! I'll tell you later, read more of this. :point_down:
 
 ## How to get the script
 So, you decided to grab the script still eh? Alright, first if you have git, do 
@@ -10,7 +10,7 @@ So, you decided to grab the script still eh? Alright, first if you have git, do
 git clone https://github.com/amiruldevkun/datingprediction_updated
 ```
 
-Then, wait until it has done cloning. After that, you will have to go to bin/Debug/net5.0, and run the exe file. You might need the (dot)net sdk to run it but im sure its fine. Another way to get the script is to use the **BIG** green button on the top called CODE. Click it and download the zip. Unzip the file and go to the file location, and run the exe file and boom, its running. Just keep in mind this is __UNPOLISHED__ and __WILL__ have bugs. If thats the case, shoot me a dm through twitter cuz thats the only place i have dms open.
+Then, wait until it has done cloning. After that, you will have to go to bin/Debug/net5.0, and run the exe file. You might need the (dot)net sdk to run it but im sure its fine. Another way to get the script is to use the **BIG** green button on the top called `CODE`. Click it and download the zip. Unzip the file and go to the file location, and run the exe file and boom, its running. Just keep in mind this is __UNPOLISHED__ and __WILL__ have bugs. If thats the case, shoot me a dm through twitter cuz thats the only place i have dms open.
 
 ## BUILDING
 Ok, so you have decided to not do it the easy way huh and wanted to build it yourself. So, these are the prerequisites.
@@ -26,7 +26,7 @@ If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED_
 
 ## HELP INQUIRES 
 If you need help you can tag me on twitter or dm me, since i dont have anyone with perms to keep the repo going, i might not respond fast so keep that in mind.
-twitter.com/amirulplays
+[twitter](https://twitter.com/amirulplays)
 
 ### RESOURCES
 https://github.com/amiruldevkun/datingpredictions
