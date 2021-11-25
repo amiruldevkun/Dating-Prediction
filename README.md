@@ -10,7 +10,11 @@ So, you decided to grab the script still eh? Alright, first if you have git, do
 git clone https://github.com/amiruldevkun/datingprediction_updated
 ```
 
-Then, wait until it has done cloning. After that, you will have to go to bin/Debug/net5.0, and run the exe file. You might need the (dot)net sdk to run it but im sure its fine. Another way to get the script is to use the **BIG** green button on the top called `CODE`. Click it and download the zip. Unzip the file and go to the file location, and run the exe file and boom, its running. Just keep in mind this is __UNPOLISHED__ and __WILL__ have bugs. If thats the case, shoot me a dm through twitter cuz thats the only place i have dms open.
+Then, wait until it has done cloning. After that, you will have to go to `bin/Debug/net5.0`, and run the exe file. You might need the (dot)net sdk to run it but im sure its fine. 
+
+Another way to get the script is to use the **BIG** green button on the top called `CODE`. Click it and download the zip. Unzip the file and go to the file location, and run the exe file and boom, its running. 
+
+Just keep in mind this is __UNPOLISHED__ and __WILL__ have bugs. If thats the case, shoot me a dm through twitter cuz thats the only place i have dms open.
 
 ## BUILDING
 Ok, so you have decided to not do it the easy way huh and wanted to build it yourself. So, these are the prerequisites.
