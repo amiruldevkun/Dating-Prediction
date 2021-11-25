@@ -23,10 +23,12 @@ Ok, so you have decided to not do it the easy way huh and wanted to build it you
 - A text editor just in case
 - Git 
 
-After you have buckled up with the prerequisites that i have stated, open the command line, and clone this repo anywhere reachable. Then open or change directory in your cmd and type `dotnet build` and let it build. After that, go to bin/Debug/net5.0 and run the exe file. And your done! 
+After you have buckled up with the prerequisites that i have stated, open the command line, and clone this repo anywhere reachable. Then, open or change directory in your cmd and type `dotnet build` and let it build. After that, go to bin/Debug/net5.0 and run the exe file. And your done! 
 
 ## CONTRIBUTING
-If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED__ only as i dont want to waste my free time going through edgy and weird code pulls all day when i have school. Fork this repo if you want, but please point back to this repo. I will put your name in the script to show the people contributed to this cli script. Also becoz i dont have any explicit way to contribute but use common sense please. The dedicated file will be made.
+If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED__ only as i dont want to waste my free time going through edgy and weird code pulls all day when i have school. 
+
+Fork this repo if you want, but please point back to this repo. I will put your name in the script to show the people contributed to this cli script. Also becoz i dont have any explicit way to contribute but use common sense please. The dedicated file will be made.
 
 ## HELP INQUIRES 
 If you need help you can tag me on twitter or dm me, since i dont have anyone with perms to keep the repo going, i might not respond fast so keep that in mind.
@@ -35,3 +37,4 @@ If you need help you can tag me on twitter or dm me, since i dont have anyone wi
 ### RESOURCES
 https://github.com/amiruldevkun/datingpredictions
 https://dotnet.microsoft.com/download/dotnet/5.0
+https://twitter.com/amirulplays
