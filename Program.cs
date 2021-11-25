@@ -32,22 +32,29 @@ namespace datingpredic_updated
             while (string.IsNullOrEmpty(gender)) {
                     Console.WriteLine("Gender cant be empty. Please re-enter your gender");
                     gender = Console.ReadLine();
-                }
-            if(gender == "boy")
+            }
+
+            if(gender == "boy" || gender == "man")
             {
                 Boy.gender = "boy";
             }
-            else 
+            else if (gender == "girl" || gender == "woman")
             {
                 Girl.gender = "girl";
             }
+            else {
+                Console.WriteLine("Gender Input Wrong. Please Put it again");
+                gender = Console.ReadLine();
+            }
+
             //! DEBUGGING AND CALLING SECTION (USE THIS WHEN NEW FUNCTIONS IS MADE & WANTED TO BE CALLED)
             //user.check();
             //crush.check();
+            Console.Write("The script has ended. Press any key to end the session.");
             Console.ReadKey();
 
             /**
-            * *Example of Debugging
+            * *Example of my style of Debugging(TM)
             * 
             *
             //user.check(); Not being tested / debugged
@@ -76,63 +83,7 @@ namespace datingpredic_updated
                 gender = "";
             }
         }
-        /* class meaning { //! NOT USABLE 
-            public string open; 
-            public string discipline;
-            public string extrovert;
-            public string neuroticism;
-            public string considerate;
-            public void meanings(){
-            
-            int answer;//? Set "answer" to be int.
-            
-            //? Prints out options and info.
-            Console.WriteLine("Please pick one of the options below: ");
-            Console.WriteLine("1. Agreeableness");
-            Console.WriteLine("2. Openness to experience");
-            Console.WriteLine("3. Neuroticism");
-            Console.WriteLine("4. Extrovert");
-            Console.WriteLine("5. Conscientiousness");
-            Console.WriteLine("More info type 0");
-
-            //? Switch statement for easier debugging.
-            answer = Convert.ToInt32(Console.ReadLine());//? Taking inputs.
-            switch (answer) {
-               case 1:
-               
-               break;
-               
-               case 2:
-               Console.WriteLine("OkayChamping");
-               break;
-
-               case 3:
-               Console.WriteLine("Testing 3");
-               break;
-
-               case 4:
-               Console.WriteLine("Testing 4");
-               break;
-
-               case 5:
-               Console.WriteLine("Testing 5");
-               break;
-
-               case 0: //? Info on the personalities.
-               var url = "https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits";//? make a variable that links to the webpage
-               var psi = new System.Diagnostics.ProcessStartInfo(); //? Makes a new process info
-               psi.UseShellExecute = true; //? Set the new process info to use shell
-               psi.FileName = url; //? assigns the psi variable to be the webpage.
-               System.Diagnostics.Process.Start(psi);//? opens the webpage.
-               break;
-
-               default:
-               Console.WriteLine("damn boi wrong aanswer");
-               break;
-            }
-            }
-        }
-        */ class user { //! ADDING NEW FUNCTIONS
+        class user { //! ADDING NEW FUNCTIONS
         
             public void check() {
             Person Boy = new Person();
