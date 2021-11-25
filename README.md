@@ -15,7 +15,7 @@ Then, wait until it has done cloning. After that, you will have to go to bin/Deb
 ## BUILDING
 Ok, so you have decided to not do it the easy way huh and wanted to build it yourself. So, these are the prerequisites.
 
-- The [.net sdk (Version 5)](https://dotnet.microsoft.com/download/dotnet/5.0)
+- The [.NET sdk (Version 5)](https://dotnet.microsoft.com/download/dotnet/5.0)
 - A text editor just in case
 - Git 
 
@@ -28,6 +28,6 @@ If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED_
 If you need help you can tag me on twitter or dm me, since i dont have anyone with perms to keep the repo going, i might not respond fast so keep that in mind.
 twitter.com/amirulplays
 
-## RESOURCES
+### RESOURCES
 https://github.com/amiruldevkun/datingpredictions
 https://dotnet.microsoft.com/download/dotnet/5.0
