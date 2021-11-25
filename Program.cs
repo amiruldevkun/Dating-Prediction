@@ -149,52 +149,78 @@ namespace datingpredic_updated
             }
 
             if(crushgender == "boy") {
-                Console.Write("Enter your name in : ");
+                Console.Write("Enter your crush's name in : ");
                 Girl.name = Console.ReadLine();
                 while (string.IsNullOrEmpty(Girl.name)) {
-                    Console.WriteLine("Name cant be empty. Please re-enter your name");
+                    Console.WriteLine("Name cant be empty. Please re-enter your crush's name");
                     Girl.name = Console.ReadLine();
                 }
-                Console.Write("Enter your age : ");
+                Console.Write("Enter your crush's age : ");
                 var ageAsString = Console.ReadLine();
                 while(!int.TryParse(ageAsString, out Girl.age)) {
-                    Console.WriteLine("Please re-enter your age.");
+                    Console.WriteLine("Please re-enter your crush's age.");
                     ageAsString = Console.ReadLine();
                 }
-                Console.Write("Enter your personality here : ");
+                Console.Write("Enter your crush's personality here : ");
                 Girl.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Girl.personality)) {
-                    Console.WriteLine("Personality cant be empty. Please re-enter your personality.");
+                    Console.WriteLine("Personality cant be empty. Please re-enter your crush's personality.");
                     Girl.personality = Console.ReadLine();
                 }
                 Console.WriteLine(Girl.name + " " + Girl.age + " " + Girl.personality);
             }
             else 
             {
-                Console.Write("Enter your name in : ");
+                Console.Write("Enter your crush's name in : ");
                 Boy.name = Console.ReadLine();
                 while (string.IsNullOrEmpty(Boy.name)) {
-                    Console.WriteLine("Name cant be empty. Please re-enter your name");
+                    Console.WriteLine("Name cant be empty. Please re-enter your crush's name");
                     Boy.name = Console.ReadLine();
                 }
-                Console.Write("Enter your age : ");
+                Console.Write("Enter your crush's age : ");
                 var ageAsString = Console.ReadLine();
                 while(!int.TryParse(ageAsString, out Boy.age)) {
-                    Console.WriteLine("Please re-enter your age.");
+                    Console.WriteLine("Please re-enter your crush's age.");
                     ageAsString = Console.ReadLine();
                 }
-                Console.Write("Enter your personality here : ");
+                Console.Write("Enter your crush's personality here : ");
                 Boy.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Boy.personality)) {
-                    Console.WriteLine("Personality cant be empty. Please re-enter your personality.");
+                    Console.WriteLine("Personality cant be empty. Please re-enter your crush's personality.");
                     Boy.personality = Console.ReadLine();
                 }
                 Console.WriteLine(Boy.name + " " + Boy.age + " " + Boy.personality);
 
             }
         }  
-    
-        
-        
+
+        class predictions {
+            public string pers1;
+            public string pers2;
+            public string pers3;
+            public string pers4;
+            public string pers5;
+            public bool placeholder;
+
+            public predictions(){
+                pers1 = "";
+                pers2 = "";
+                pers3 = "";
+                pers4 = "";
+                pers5 = "";
+                placeholder = true;
+            }
+            public void which() {
+                Person Boy = new Person();
+                Person Girl = new Person();
+                predictions perc = new predictions();
+            }
+            public void finalize() {
+                Person Boy = new Person();
+                Person Girl = new Person();
+                predictions perc = new predictions();
+
+            }
+        }
     }
 }
