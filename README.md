@@ -13,7 +13,7 @@ Secondly, it will take your age name and personality, the same goes for the crus
 
 Lastly, it will try to match you together, by taking personality and age into consideration.
 
-(stolen from this my old python repo [python](https://github.com/amiruldevkun/datingpredictions))
+(stolen from this my old [python](https://github.com/amiruldevkun/datingpredictionds) repo)
 
 ## How to get the script
 So, you decided to grab the script. Alright, first if you have git, do 
