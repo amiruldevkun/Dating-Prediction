@@ -4,6 +4,17 @@ A dating prediction cli script to see if you have a chance with the person that 
 ## Why did i make this?
 Because i was bored and wanted to do something in my free time. Its not useful in anykind, but feel free to try it out i guess. Its not accurate by any chance, so if you value your integrity and don't want to embarrass your self, please step away. But, if you want to contribute, you can! I'll tell you later, read more of this. :point_down:
 
+
+## How does this script works?
+
+First, the code will try and determine your gender. Then, once it knows your gender it will assign the other gender to be the crush's gender
+
+Secondly, it will take your age name and personality, the same goes for the crush. 
+
+Lastly, it will try to match you together, by taking personality and age into consideration.
+
+(stolen from this my old python repo [python](https://github.com/amiruldevkun/datingpredictions))
+
 ## How to get the script
 So, you decided to grab the script. Alright, first if you have git, do 
 ```
@@ -23,7 +34,7 @@ Ok, so you have decided to not do it the easy way and wanted to build it yoursel
 - A text editor just in case
 - Git 
 
-After you have buckled up with the prerequisites that i have stated, open the command line, and clone this repo anywhere reachable. Then, open or change directory in your cmd and type `dotnet build` and let it build. After that, go to bin/Debug/net5.0 and run the exe file. And your done! 
+After you have buckled up with the prerequisites that i have stated, open the command line, and clone this repo anywhere reachable. Then, open or change directory in your cmd and type `dotnet build` and let it build. After that, go to `bin/Debug/net5.0` and run the exe file. And your done! 
 
 ## CONTRIBUTING
 If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED__ only as i dont want to waste my free time going through edgy and weird code pulls all day when i have school. 
