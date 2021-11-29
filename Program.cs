@@ -16,6 +16,9 @@ namespace datingpredic_updated
 {
     class Program
     {
+        public class def {
+            public static string gender;
+        }
         static void Main(string[] args)
         {
             //* New sub-classes
@@ -24,30 +27,31 @@ namespace datingpredic_updated
             crush crush = new crush();
             Person Boy = new Person();
             Person Girl = new Person();
+            def d = new def();
             
             //* Actual program starts here
 
             Console.Write("Enter your gender : ");
-            var gender = Console.ReadLine();
-            while (string.IsNullOrEmpty(gender)) {
+            def.gender = Console.ReadLine();
+            while (string.IsNullOrEmpty(def.gender)) {
                     Console.WriteLine("Gender cant be empty. Please re-enter your gender");
-                    gender = Console.ReadLine();
+                    def.gender = Console.ReadLine();
             }
 
-            if(gender == "boy" || gender == "man")
+            if(def.gender == "boy" || def.gender == "man")
             {
                 Boy.gender = "boy";
             }
-            else if (gender == "girl" || gender == "woman")
+            else if (def.gender == "girl" || def.gender == "woman")
             {
                 Girl.gender = "girl";
             }
             else {
                 Console.WriteLine("Gender Input Wrong. Please Put it again");
-                gender = Console.ReadLine();
+                def.gender = Console.ReadLine();
             }
 
-            //! DEBUGGING AND CALLING SECTION (USE THIS WHEN NEW FUNCTIONS IS MADE & WANTED TO BE CALLED)
+            //? DEBUGGING AND CALLING SECTION (USE THIS WHEN NEW FUNCTIONS IS MADE & WANTED TO BE CALLED)
             //user.check();
             //crush.check();
             Console.Write("The script has ended. Press any key to end the session.");
@@ -195,25 +199,45 @@ namespace datingpredic_updated
         }  
 
         class predictions {
-            public string pers1;
-            public string pers2;
-            public string pers3;
-            public string pers4;
-            public string pers5;
-            public bool placeholder;
+            public static string pers1;
+            public static string pers2;
+            public static string pers3;
+            public static string pers4;
+            public static string pers5;
+            public bool cool_bool;
+            
 
             public predictions(){
-                pers1 = "";
-                pers2 = "";
-                pers3 = "";
-                pers4 = "";
-                pers5 = "";
-                placeholder = true;
+                pers1 = "Openness";
+                pers2 = "Conscientiousness";
+                pers3 = "Extraversion";
+                pers4 = "Agreeableness";
+                pers5 = "Neuroticism";
+                cool_bool = true;
             }
-            public void which() {
+            public static void which() {
                 Person Boy = new Person();
                 Person Girl = new Person();
                 predictions perc = new predictions();
+                Program.def d = new Program.def();
+                if(Program.def.gender == "boy" || Program.def.gender == "man") {
+                    if (Boy.personality == pers5 && Girl.personality == pers4 || Boy.personality == pers4 && Girl.personality == pers5) {
+                        Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
+                        return;
+                    }
+                    if (Boy.personality == pers3 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers3) {
+                        Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
+                        return;
+                    }
+                    if (Boy.personality == pers4 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers4) {
+                        Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
+                        return;
+                    }
+                    if (Boy.personality == pers4 && Girl.personality == pers1 || Boy.personality == pers1 && Girl.personality == pers4) {
+                        Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
+                    }
+                }
+                
             }
             public void finalize() {
                 Person Boy = new Person();
