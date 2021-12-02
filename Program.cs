@@ -52,8 +52,8 @@ namespace datingpredic_updated
             }
 
             //? DEBUGGING AND CALLING SECTION (USE THIS WHEN NEW FUNCTIONS IS MADE & WANTED TO BE CALLED)
-            //user.check();
-            //crush.check();
+            user.check();
+            crush.check();
             Console.Write("The script has ended. Press any key to end the session.");
             Console.ReadKey();
 
