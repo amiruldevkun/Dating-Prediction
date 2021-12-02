@@ -221,20 +221,41 @@ namespace datingpredic_updated
                 predictions perc = new predictions();
                 Program.def d = new Program.def();
                 if(Program.def.gender == "boy" || Program.def.gender == "man") {
+                    //* Compatible Predictions
                     if (Boy.personality == pers5 && Girl.personality == pers4 || Boy.personality == pers4 && Girl.personality == pers5) {
                         Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
                         return;
                     }
-                    if (Boy.personality == pers3 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers3) {
+                    else if (Boy.personality == pers3 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers3) {
                         Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
                         return;
                     }
-                    if (Boy.personality == pers4 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers4) {
+                    else if (Boy.personality == pers4 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers4) {
                         Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
                         return;
                     }
-                    if (Boy.personality == pers4 && Girl.personality == pers1 || Boy.personality == pers1 && Girl.personality == pers4) {
+                    else if (Boy.personality == pers4 && Girl.personality == pers1 || Boy.personality == pers1 && Girl.personality == pers4) {
                         Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
+                        return;
+                    }
+                    
+                    //* Incompatible Predictions
+
+                    else if (Boy.personality == pers5 && Girl.personality == pers3 || Boy.personality == pers3 && Girl.personality == pers5) {
+                        Console.WriteLine("You still have a chance. but, it's  very slim.");
+                        return;
+                    }
+                    else if (Boy.personality == pers3 && Girl.personality == pers4 || Boy.personality == pers4 && Girl.personality == pers3) {
+                        Console.WriteLine("Youstill have a chance. But, it's very slim.");
+                        return;
+                    }
+                    else if (Boy.personality == pers1 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers1) {
+                        Console.WriteLine("You still have a chance. But, it's very slim.");
+                        return;
+                    }
+                    else if (Boy.personality == pers2 && Girl.personality == pers5 || Boy.personality == pers5 && Girl.personality == pers2) {
+                        Console.WriteLine("You still have a chance. But, it's very slim");
+                        return;
                     }
                 }
                 
