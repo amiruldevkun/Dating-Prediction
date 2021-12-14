@@ -15,7 +15,7 @@ Lastly, it will try to match you together, by taking personality and age into co
 
 (stolen from this my old [python](https://github.com/amiruldevkun/datingpredictions) repo)
 
-## How to get the script
+<!-- ## How to get the script
 So, you decided to grab the script. Alright, first if you have git, do 
 ```
 git clone https://github.com/amiruldevkun/datingprediction_updated
@@ -25,7 +25,7 @@ Then, wait until it has done cloning. After that, you will have to go to `bin/De
 
 Another way to get the script is to use the **BIG** green button on the top called `CODE`. Click it and download the zip. Unzip the file and go to the file location, and run the exe file and boom, its running. 
 
-Just keep in mind that this code is __UNPOLISHED__ and __WILL__ have bugs. If thats the case, shoot me a dm through twitter cuz thats the only place i have dms open.
+Just keep in mind that this code is __UNPOLISHED__ and __WILL__ have bugs. If thats the case, shoot me a dm through twitter cuz thats the only place i have dms open. -->
 
 ## BUILDING
 Ok, so you have decided to not do it the easy way and wanted to build it yourself. So, these are the prerequisites.
