@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
+using datingpredic_updated;
+
 
 /*
 TODO: Finish meaning class
@@ -14,8 +9,10 @@ TODO: Clean more stuff
 
 namespace datingpredic_updated
 {
-    class Program
+    public class Program
     {
+        private static System.Timers.Timer tm;
+        
         public class def {
             public static string gender;
         }
@@ -30,7 +27,27 @@ namespace datingpredic_updated
             def d = new def();
             
             //* Actual program starts here
+            Console.Title = "Dating Predictions by AmirulDevKun";
+            String asciiArt = @"
+                                
+██████╗░░█████╗░████████╗██╗███╗░░██╗░██████╗░
+██╔══██╗██╔══██╗╚══██╔══╝██║████╗░██║██╔════╝░
+██║░░██║███████║░░░██║░░░██║██╔██╗██║██║░░██╗░
+██║░░██║██╔══██║░░░██║░░░██║██║╚████║██║░░╚██╗
+██████╔╝██║░░██║░░░██║░░░██║██║░╚███║╚██████╔╝
+╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░╚══╝░╚═════╝░
 
+██████╗░██████╗░███████╗██████╗░██╗░█████╗░████████╗██╗░█████╗░███╗░░██╗░██████╗
+██╔══██╗██╔══██╗██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝██║██╔══██╗████╗░██║██╔════╝
+██████╔╝██████╔╝█████╗░░██║░░██║██║██║░░╚═╝░░░██║░░░██║██║░░██║██╔██╗██║╚█████╗░
+██╔═══╝░██╔══██╗██╔══╝░░██║░░██║██║██║░░██╗░░░██║░░░██║██║░░██║██║╚████║░╚═══██╗
+██║░░░░░██║░░██║███████╗██████╔╝██║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
+╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
+
+by AmirulDevKun
+                ";
+            ScriptAnim();
+            Console.WriteLine(asciiArt);
             Console.Write("Enter your gender : ");
             def.gender = Console.ReadLine();
             while (string.IsNullOrEmpty(def.gender)) {
@@ -70,9 +87,19 @@ namespace datingpredic_updated
             *
             */
         }
+        private static void ScriptAnim() {
+            Console.WriteLine("Loading the script...");
+            using (var progress = new ProgressBar()) {
+                for (int i = 0; i < 100; i++) {
+                    progress.Report((double)i / 100);
+                    System.Threading.Thread.Sleep(100);
+                }
+            }
+            Console.Clear();
+            Console.WriteLine("Script loaded.");
+        }
             
     }
-        
          
         class Person { //! FIXED CLASS
             public string name;
@@ -106,7 +133,8 @@ namespace datingpredic_updated
                     Console.WriteLine("Please re-enter your age.");
                     ageAsString = Console.ReadLine();
                 }
-                Console.Write("Enter your personality here : ");
+                Console.Write("1. Openness 2. Neuroticism 3. Extraversion 4. Agreeableness 5. Conscientiousness");
+                Console.WriteLine("Enter your personality here : ");
                 Boy.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Boy.personality)) {
                     Console.WriteLine("Personality cant be empty. Please re-enter your personality.");
@@ -128,7 +156,8 @@ namespace datingpredic_updated
                     Console.WriteLine("Please re-enter your age name.");
                     ageAsString = Console.ReadLine();
                 }
-                Console.Write("Enter your personality here : ");
+                Console.Write("1. Openness 2. Neuroticism 3. Extraversion 4. Agreeableness 5. Conscientiousness");
+                Console.WriteLine("Enter your personality here : ");
                 Girl.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Girl.personality)) {
                     Console.WriteLine("Personality cant be empty. Please re-enter your personality.");
@@ -165,7 +194,8 @@ namespace datingpredic_updated
                     Console.WriteLine("Please re-enter your crush's age.");
                     ageAsString = Console.ReadLine();
                 }
-                Console.Write("Enter your crush's personality here : ");
+                Console.Write("1. Openness 2. Conscientiousness 3. Extraversion 4. Agreeableness 5. Neuroticism");
+                Console.WriteLine("Enter your crush's personality here : ");
                 Girl.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Girl.personality)) {
                     Console.WriteLine("Personality cant be empty. Please re-enter your crush's personality.");
@@ -187,6 +217,7 @@ namespace datingpredic_updated
                     Console.WriteLine("Please re-enter your crush's age.");
                     ageAsString = Console.ReadLine();
                 }
+                Console.Write("1. Openness 2. Neuroticism 3. Extraversion 4. Agreeableness 5. Conscientiousness");
                 Console.Write("Enter your crush's personality here : ");
                 Boy.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Boy.personality)) {
@@ -199,12 +230,12 @@ namespace datingpredic_updated
         }  
 
         class predictions {
-            public static string pers1;
-            public static string pers2;
-            public static string pers3;
-            public static string pers4;
-            public static string pers5;
-            public bool cool_bool;
+            private static string pers1;
+            private static string pers2;
+            private static string pers3;
+            private static string pers4;
+            private static string pers5;
+            private bool cool_bool;
             
 
             public predictions(){
@@ -221,7 +252,9 @@ namespace datingpredic_updated
                 predictions perc = new predictions();
                 Program.def d = new Program.def();
                 if(Program.def.gender == "boy" || Program.def.gender == "man") {
+                    
                     //* Compatible Predictions
+                    
                     if (Boy.personality == pers5 && Girl.personality == pers4 || Boy.personality == pers4 && Girl.personality == pers5) {
                         Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
                         return;
@@ -264,7 +297,22 @@ namespace datingpredic_updated
                 Person Boy = new Person();
                 Person Girl = new Person();
                 predictions perc = new predictions();
+                // print a percentage at random
+                // then print a message
+                // if the percentage is more than 50%
+                // then print a message saying "Good Job!"
+                // else print a message saying "You need to work on your personality"
 
+                var rand = new Random();
+                var percentage = rand.Next(1, 100);
+                if (percentage > 50) {
+                    Console.WriteLine("Good Job!");
+                }
+                else {
+                    Console.WriteLine("You need to work on your personality");
+                }
+
+                
             }
         }
     }
