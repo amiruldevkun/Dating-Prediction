@@ -46,8 +46,7 @@ If you need help you can tag me on twitter or dm me, since i dont have anyone wi
 [twitter](https://twitter.com/amirulplays)
 
 ### RESOURCES
-https://github.com/amiruldevkun/datingpredictions
-https://dotnet.microsoft.com/download/dotnet/5.0
-https://twitter.com/amirulplays
-
-[ProgramBar Source Code *Thank you Daniel!*](https://gist.github.com/DanielSWolf/0ab6a96899cc5377bf54)
+https://github.com/amiruldevkun/datingpredictions \n
+https://dotnet.microsoft.com/download/dotnet/5.0 \n
+https://twitter.com/amirulplays \n
+[ProgramBar Source Code (Thank you Daniel!)](https://gist.github.com/DanielSWolf/0ab6a96899cc5377bf54)
