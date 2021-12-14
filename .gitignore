@@ -1,4 +1,5 @@
-obj/
+.obj/
 .vscode/
-obj/Debug/net5.0/datingpredic_updated.csproj.AssemblyReference.cache
+.obj/Debug/net5.0/datingpredic_updated.csproj.AssemblyReference.cache
 .TODO
+.bin/
