@@ -49,3 +49,4 @@ If you need help you can tag me on twitter or dm me, since i dont have anyone wi
 https://github.com/amiruldevkun/datingpredictions
 https://dotnet.microsoft.com/download/dotnet/5.0
 https://twitter.com/amirulplays
+[ProgramBar Source Code *Thank you Daniel!*](https://gist.github.com/DanielSWolf/0ab6a96899cc5377bf54)
