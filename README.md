@@ -43,7 +43,7 @@ Fork this repo if you want, but please point back to this repo. I will put your 
 
 ## HELP INQUIRES 
 If you need help you can tag me on twitter or dm me, since i dont have anyone with perms to keep the repo going, i might not respond fast so keep that in mind.
-[twitter](https://twitter.com/amirulplays)
+
 
 ### RESOURCES
 https://github.com/amiruldevkun/datingpredictions <br />
