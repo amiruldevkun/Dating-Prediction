@@ -12,7 +12,7 @@ namespace datingpredic_updated
 {
     public class Program
     {
-        private static System.Timers.Timer tm;
+        //private static System.Timers.Timer tm;
         
         public class def {
             public static string gender;
@@ -48,7 +48,7 @@ namespace datingpredic_updated
 
 by AmirulDevKun
                 ";
-            ScriptAnim();
+            //ScriptAnim();
             Console.WriteLine(asciiArt);
             Console.Write("Enter your gender : ");
             def.gender = Console.ReadLine();
@@ -71,12 +71,12 @@ by AmirulDevKun
             }
 
             //? DEBUGGING AND CALLING SECTION (USE THIS WHEN NEW FUNCTIONS IS MADE & WANTED TO BE CALLED)
-            // user.check();
+            user.check();
             // crush.check();
-            perc.lazyPrint();
+            //perc.lazyPrint();
             Console.WriteLine("The script has ended. Press any key to end the session.");
             Console.ReadKey();
-            EndScriptAnim();
+            //EndScriptAnim();
 
             /**
             * *Example of my style of Debugging(TM)
@@ -129,6 +129,15 @@ by AmirulDevKun
                 personality = "";
                 gender = "";
             }
+             
+            public void personality_check(string personality) {
+            Person Boy = new Person();
+            Person Girl = new Person();
+
+            Console.Write("Enter your personality here: ");
+            Console.ReadLine();
+
+            }
         }
         class user { //! ADDING NEW FUNCTIONS
         
@@ -139,28 +148,46 @@ by AmirulDevKun
             if(Boy.gender == "boy") {
                 //* This part is pretty complicated... OH WHO AM I KIDDING!
                 
-                Console.Write("Enter your name in : ");
+                Console.WriteLine("Enter your name in : ");
+                Console.WriteLine();
                 Boy.name = Console.ReadLine();
                 while (string.IsNullOrEmpty(Boy.name)) { //? This checks if the input is empty. If it is empty,
                     Console.WriteLine("Name cant be empty. Please re-enter your name");//? Then it spits out an error
                     Boy.name = Console.ReadLine();//? Reprompt the input
                 }
 
-                Console.Write("Enter your age : ");
+                Console.WriteLine("Enter your age : ");
+                Console.WriteLine();
                 var ageAsString = Console.ReadLine();
+                
                 while(!int.TryParse(ageAsString, out Boy.age)) {
                     Console.WriteLine("Please re-enter your age.");
                     ageAsString = Console.ReadLine();
                 }
 
-                for (int i =0; i < perc.PP.Length; i++) {
-                    Console.WriteLine(perc.PP[i]);
-                }
-                Console.WriteLine("Enter your personality here : ");
+                perc.lazyPrint();
+                Console.Write("Enter your personality here : ");
+                Console.WriteLine();
                 Boy.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Boy.personality)) {
                     Console.WriteLine("Personality cant be empty. Please re-enter your personality.");
                     Boy.personality = Console.ReadLine();
+                }
+                switch (Boy.personality) {
+                    case "Openness":
+                        break;
+                    case "Conscientiousness":
+                        break;
+                    case "Extraversion":
+                        break;
+                    case "Agreeableness":
+                        break;
+                    case "Neuroticism":
+                        break;
+                    default:
+                        Console.WriteLine("Invalid personality. Please reinput it after this line");
+                        Boy.personality = Console.ReadLine();
+                        break;
                 }
                 Console.WriteLine(Boy.name + " " + Boy.age + " " + Boy.personality);
             }
@@ -179,9 +206,7 @@ by AmirulDevKun
                     Console.WriteLine("Please re-enter your age name.");
                     ageAsString = Console.ReadLine();
                 }
-                for (int i =0; i < perc.PP.Length; i++) {
-                    Console.WriteLine(perc.PP[i]);
-                }
+                perc.lazyPrint();
                 Console.WriteLine("Enter your personality here : ");
                 Girl.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Girl.personality)) {
@@ -222,9 +247,7 @@ by AmirulDevKun
                     Console.WriteLine("Please re-enter your crush's age.");
                     ageAsString = Console.ReadLine();
                 }
-                for (int i =0; i < perc.PP.Length; i++) {
-                    Console.WriteLine(perc.PP[i]);
-                }
+                perc.lazyPrint();
                 Console.WriteLine("Enter your crush's personality here : ");
                 Girl.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Girl.personality)) {
@@ -249,9 +272,7 @@ by AmirulDevKun
                     Console.WriteLine("Please re-enter your crush's age.");
                     ageAsString = Console.ReadLine();
                 }
-                for (int i =0; i < perc.PP.Length; i++) {
-                    Console.WriteLine(perc.PP[i]);
-                }
+                perc.lazyPrint();
                 Console.Write("Enter your crush's personality here : ");
                 Boy.personality = Console.ReadLine();
                 while(string.IsNullOrEmpty(Boy.personality)) {
@@ -269,7 +290,7 @@ by AmirulDevKun
             private static string pers3;
             private static string pers4;
             private static string pers5;
-            private bool cool_bool;
+            //private bool cool_bool;
             public readonly string [] PP = {pers1, pers2, pers3, pers4, pers5};        
         
             public predictions(){
@@ -278,7 +299,7 @@ by AmirulDevKun
                 pers3 = "Extraversion";
                 pers4 = "Agreeableness";
                 pers5 = "Neuroticism";
-                cool_bool = true;
+                //cool_bool = true;
             }
 
             //! Lazy implementation of array printing.
@@ -291,6 +312,7 @@ by AmirulDevKun
                 Console.WriteLine(PP[i]);
                 }
             }
+
             public static void which() {
                 Person Boy = new Person();
                 Person Girl = new Person();
