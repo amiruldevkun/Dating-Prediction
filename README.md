@@ -2,7 +2,7 @@
 A dating prediction cli script to see if you have a chance with the person that catches your eye.
 
 ## Why did i make this?
-Because i was bored and wanted to do something in my free time. Its not useful in anykind, but feel free to try it out i guess. Its not accurate by any chance, so if you value your integrity and don't want to embarrass your self, please step away. But, if you like being embarrased or just playing around, then go straight to the building section. You could also contribute to this mess, I'll tell you later, read more of this. :point_down:
+Because i was bored and wanted to do something in my free time. Its not useful in anykind, but feel free to try it out i guess. Its not accurate by any chance, so if you value your integrity and don't want to embarrass your self, please step away. But, if you like being embarrased or just playing around, then go straight to the [building](https://github.com/amiruldevkun/Dating-Prediction#building) section. You could also contribute to this mess, I'll tell you later, read more of this. :point_down:
 
 
 ## How does this script works?
