@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 
-
 /*
 TODO: Finish meaning class
 TODO: Clean more stuff
@@ -48,11 +47,14 @@ namespace datingpredic_updated
 
 by AmirulDevKun
                 ";
-            //ScriptAnim();
+            ScriptAnim();
+
             Console.WriteLine(asciiArt);
             Console.Write("Enter your gender : ");
             def.gender = Console.ReadLine();
+            Console.WriteLine();
             while (string.IsNullOrEmpty(def.gender)) {
+                Console.WriteLine();
                     Console.WriteLine("Gender cant be empty. Please re-enter your gender");
                     def.gender = Console.ReadLine();
             }
@@ -72,11 +74,11 @@ by AmirulDevKun
 
             //? DEBUGGING AND CALLING SECTION (USE THIS WHEN NEW FUNCTIONS IS MADE & WANTED TO BE CALLED)
             user.check();
-            // crush.check();
+            crush.check();
             //perc.lazyPrint();
             Console.WriteLine("The script has ended. Press any key to end the session.");
             Console.ReadKey();
-            //EndScriptAnim();
+            EndScriptAnim();
 
             /**
             * *Example of my style of Debugging(TM)
@@ -120,14 +122,16 @@ by AmirulDevKun
         class Person { //! FIXED CLASS
             public string name;
             public int age;
-            public string personality;
+            public int personality;
+        public string str_personality;
             public string gender;
 
             public Person() {
                 name = "";
                 age = 0;
-                personality = "";
+                personality = 0;
                 gender = "";
+                str_personality = "";
             }
              
             public void personality_check(string personality) {
@@ -136,6 +140,7 @@ by AmirulDevKun
 
             Console.Write("Enter your personality here: ");
             Console.ReadLine();
+            Console.WriteLine();
 
             }
         }
@@ -148,70 +153,84 @@ by AmirulDevKun
             if(Boy.gender == "boy") {
                 //* This part is pretty complicated... OH WHO AM I KIDDING!
                 
-                Console.WriteLine("Enter your name in : ");
-                Console.WriteLine();
+                Console.Write("Enter your name in : ");
                 Boy.name = Console.ReadLine();
+                Console.WriteLine();
                 while (string.IsNullOrEmpty(Boy.name)) { //? This checks if the input is empty. If it is empty,
+                    Console.WriteLine(); 
                     Console.WriteLine("Name cant be empty. Please re-enter your name");//? Then it spits out an error
                     Boy.name = Console.ReadLine();//? Reprompt the input
                 }
 
-                Console.WriteLine("Enter your age : ");
-                Console.WriteLine();
+                Console.Write("Enter your age : ");
                 var ageAsString = Console.ReadLine();
-                
+                Console.WriteLine();
                 while(!int.TryParse(ageAsString, out Boy.age)) {
+                    Console.WriteLine();
                     Console.WriteLine("Please re-enter your age.");
                     ageAsString = Console.ReadLine();
                 }
 
                 perc.lazyPrint();
                 Console.Write("Enter your personality here : ");
+                Boy.personality = Int32.Parse(Console.ReadLine());
                 Console.WriteLine();
-                Boy.personality = Console.ReadLine();
-                while(string.IsNullOrEmpty(Boy.personality)) {
+                while(!String.IsNullOrEmpty(Boy.personality.ToString())) {
+                    Console.WriteLine();
                     Console.WriteLine("Personality cant be empty. Please re-enter your personality.");
-                    Boy.personality = Console.ReadLine();
+                    Boy.personality = Int32.Parse(Console.ReadLine());
                 }
                 switch (Boy.personality) {
-                    case "Openness":
+                    case 1:
+                        Boy.str_personality = "Openness";
                         break;
-                    case "Conscientiousness":
+                    case 2:
+                        Boy.str_personality = "Conscientiousness";
                         break;
-                    case "Extraversion":
+                    case 3:
+                        Boy.str_personality = "Extraversion";
                         break;
-                    case "Agreeableness":
+                    case 4:
+                        Boy.str_personality = "Agreeableness";
                         break;
-                    case "Neuroticism":
+                    case 5:
+                        Boy.str_personality = "Neuroticism";
                         break;
                     default:
                         Console.WriteLine("Invalid personality. Please reinput it after this line");
-                        Boy.personality = Console.ReadLine();
+                        Boy.personality = Int32.Parse(Console.ReadLine());
                         break;
                 }
-                Console.WriteLine(Boy.name + " " + Boy.age + " " + Boy.personality);
+                Console.WriteLine(Boy.name + " " + Boy.age + " " + Boy.str_personality);
             }
             else 
             {
                 Console.Write("Enter your name in : ");
                 Girl.name = Console.ReadLine();
-                while (string.IsNullOrEmpty(Girl.name)) {
+                Console.WriteLine();
+                while (string.IsNullOrEmpty(Girl.name))
+                {
+                    Console.WriteLine();
                     Console.WriteLine("Name cant be empty. Please re-enter your name");
                     Boy.name = Console.ReadLine();
                 }
                 
                 Console.Write("Enter your age : ");
                 var ageAsString = Console.ReadLine();
+                Console.WriteLine();
                 while(!int.TryParse(ageAsString, out Girl.age)) {
+                    Console.WriteLine();
                     Console.WriteLine("Please re-enter your age name.");
                     ageAsString = Console.ReadLine();
                 }
                 perc.lazyPrint();
-                Console.WriteLine("Enter your personality here : ");
-                Girl.personality = Console.ReadLine();
-                while(string.IsNullOrEmpty(Girl.personality)) {
+                Console.Write("Enter your personality here : ");
+                Girl.personality = Int32.Parse(Console.ReadLine());
+                Console.WriteLine();
+                while(string.IsNullOrEmpty(Girl.personality.ToString())) {
+                    Console.WriteLine();
                     Console.WriteLine("Personality cant be empty. Please re-enter your personality.");
-                    Girl.personality = Console.ReadLine();
+                    Girl.personality = Int32.Parse(Console.ReadLine());
                 }
 
                 Console.WriteLine(Girl.name + " " + Girl.age + " " + Girl.personality);
@@ -225,8 +244,9 @@ by AmirulDevKun
             Person Girl = new Person();
             var perc = new predictions();
             string crushgender;
-            Console.WriteLine("What is your crush's gender?");
+            Console.Write("What is your crush's gender? : ");
             crushgender = Console.ReadLine();
+            Console.WriteLine();
             while(string.IsNullOrEmpty(crushgender)) {
                 Console.WriteLine("Please state your crush's gender.");
                 crushgender = Console.ReadLine();
@@ -236,23 +256,29 @@ by AmirulDevKun
                 
                 Console.Write("Enter your crush's name in : ");
                 Girl.name = Console.ReadLine();
+                Console.WriteLine();
                 while (string.IsNullOrEmpty(Girl.name)) {
+                    Console.WriteLine();
                     Console.WriteLine("Name cant be empty. Please re-enter your crush's name");
                     Girl.name = Console.ReadLine();
                 }
                 
                 Console.Write("Enter your crush's age : ");
                 var ageAsString = Console.ReadLine();
+                Console.WriteLine();
                 while(!int.TryParse(ageAsString, out Girl.age)) {
+                    Console.WriteLine();
                     Console.WriteLine("Please re-enter your crush's age.");
                     ageAsString = Console.ReadLine();
                 }
                 perc.lazyPrint();
-                Console.WriteLine("Enter your crush's personality here : ");
-                Girl.personality = Console.ReadLine();
-                while(string.IsNullOrEmpty(Girl.personality)) {
+                Console.Write("Enter your crush's personality here : ");
+                Girl.personality = Int32.Parse(Console.ReadLine());
+                Console.WriteLine();
+                while(string.IsNullOrEmpty(Girl.personality.ToString())) {
+                    Console.WriteLine();
                     Console.WriteLine("Personality cant be empty. Please re-enter your crush's personality.");
-                    Girl.personality = Console.ReadLine();
+                    Girl.personality = Int32.Parse(Console.ReadLine());
                 }
                 Console.WriteLine(Girl.name + " " + Girl.age + " " + Girl.personality);
             
@@ -261,23 +287,29 @@ by AmirulDevKun
             {
                 Console.Write("Enter your crush's name in : ");
                 Boy.name = Console.ReadLine();
+                Console.WriteLine();
                 while (string.IsNullOrEmpty(Boy.name)) {
+                    Console.WriteLine();
                     Console.WriteLine("Name cant be empty. Please re-enter your crush's name");
                     Boy.name = Console.ReadLine();
                 }
                 
                 Console.Write("Enter your crush's age : ");
                 var ageAsString = Console.ReadLine();
+                Console.WriteLine();
                 while(!int.TryParse(ageAsString, out Boy.age)) {
+                    Console.WriteLine();
                     Console.WriteLine("Please re-enter your crush's age.");
                     ageAsString = Console.ReadLine();
                 }
                 perc.lazyPrint();
                 Console.Write("Enter your crush's personality here : ");
-                Boy.personality = Console.ReadLine();
-                while(string.IsNullOrEmpty(Boy.personality)) {
+                Boy.personality = Int32.Parse(Console.ReadLine());
+                Console.WriteLine();
+                while(string.IsNullOrEmpty(Boy.personality.ToString())) {
+                    Console.WriteLine();
                     Console.WriteLine("Personality cant be empty. Please re-enter your crush's personality.");
-                    Boy.personality = Console.ReadLine();
+                    Boy.personality = Int32.Parse(Console.ReadLine());
                 }
                 Console.WriteLine(Boy.name + " " + Boy.age + " " + Boy.personality);
 
@@ -306,11 +338,18 @@ by AmirulDevKun
             public void lazyPrint()
             {
             string[] PP = { pers1, pers2, pers3, pers4, pers5 };
-            
-                for (int i = 0; i < PP.Length; i++)
-                {
-                Console.WriteLine(PP[i]);
-                }
+
+            //for (int i = 0; i < PP.Length; i++)
+            //{
+            //Console.WriteLine(PP[i]);
+            //}
+            Console.WriteLine("1." + PP[0]);
+            Console.WriteLine("2." + PP[1]);
+            Console.WriteLine("3." + PP[2]);
+            Console.WriteLine("4." + PP[3]);
+            Console.WriteLine("5." + PP[4]);
+
+            Console.WriteLine();
             }
 
             public static void which() {
@@ -318,46 +357,7 @@ by AmirulDevKun
                 Person Girl = new Person();
                 predictions perc = new predictions();
                 Program.def d = new Program.def();
-                if(Program.def.gender == "boy" || Program.def.gender == "man") {
-                    
-                    //* Compatible Predictions
-                    
-                    if (Boy.personality == pers5 && Girl.personality == pers4 || Boy.personality == pers4 && Girl.personality == pers5) {
-                        Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
-                        return;
-                    }
-                    else if (Boy.personality == pers3 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers3) {
-                        Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
-                        return;
-                    }
-                    else if (Boy.personality == pers4 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers4) {
-                        Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
-                        return;
-                    }
-                    else if (Boy.personality == pers4 && Girl.personality == pers1 || Boy.personality == pers1 && Girl.personality == pers4) {
-                        Console.WriteLine("You will have a chance to be with her/him. Take the chance when you see it.");
-                        return;
-                    }
-                    
-                    //* Incompatible Predictions
-
-                    else if (Boy.personality == pers5 && Girl.personality == pers3 || Boy.personality == pers3 && Girl.personality == pers5) {
-                        Console.WriteLine("You still have a chance. but, it's  very slim.");
-                        return;
-                    }
-                    else if (Boy.personality == pers3 && Girl.personality == pers4 || Boy.personality == pers4 && Girl.personality == pers3) {
-                        Console.WriteLine("Youstill have a chance. But, it's very slim.");
-                        return;
-                    }
-                    else if (Boy.personality == pers1 && Girl.personality == pers2 || Boy.personality == pers2 && Girl.personality == pers1) {
-                        Console.WriteLine("You still have a chance. But, it's very slim.");
-                        return;
-                    }
-                    else if (Boy.personality == pers2 && Girl.personality == pers5 || Boy.personality == pers5 && Girl.personality == pers2) {
-                        Console.WriteLine("You still have a chance. But, it's very slim");
-                        return;
-                    }
-                }
+                
                 
             }
             public void finalize() {
