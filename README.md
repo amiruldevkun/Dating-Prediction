@@ -17,7 +17,9 @@ Lastly, it will try to match you together, by taking personality and age into co
 
 # IMPORTANT
 
-This program is currently __UNDER DEVELOPMENT__ so expect unfinished-ness and bugs. 
+This program is currently __UNDER DEVELOPMENT__ so expect unfinished-ness and bugs. The feature that is in development is 
+the personality feature, the age will be in development straight after im done with the personality feature. :)
+
 <!-- ## How to get the script
 So, you decided to grab the script. Alright, first if you have git, do 
 ```

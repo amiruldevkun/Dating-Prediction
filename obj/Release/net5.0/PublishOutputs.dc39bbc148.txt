@@ -1,0 +1,5 @@
+C:\Users\amirulpanda\Desktop\datingprediction_updated\bin\Release\net5.0\publish\datingpredic_updated.exe
+C:\Users\amirulpanda\Desktop\datingprediction_updated\bin\Release\net5.0\publish\datingpredic_updated.dll
+C:\Users\amirulpanda\Desktop\datingprediction_updated\bin\Release\net5.0\publish\datingpredic_updated.deps.json
+C:\Users\amirulpanda\Desktop\datingprediction_updated\bin\Release\net5.0\publish\datingpredic_updated.runtimeconfig.json
+C:\Users\amirulpanda\Desktop\datingprediction_updated\bin\Release\net5.0\publish\datingpredic_updated.pdb
