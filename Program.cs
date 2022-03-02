@@ -457,10 +457,11 @@ by AmirulDevKun
             Person Girl = new Person();
             Program p = new Program();
 
-            if (Boy.personality == 1 && Girl.personality == 1 || Boy.personality == 2 && Girl.personality == 2)
+            if (Boy.personality == 1 && Girl.personality == 3 || Boy.personality == 3 && Girl.personality == 1)
             {
-
+                Console.WriteLine("You might have an opportunity. Take it when you see it");
             } 
+
         }
     }
 }
