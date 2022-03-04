@@ -18,7 +18,7 @@ Lastly, it will try to match you together, by taking personality and age into co
 # IMPORTANT
 
 This program is currently __UNDER DEVELOPMENT__ so expect unfinished-ness and bugs. The feature that is in development is 
-the personality feature, the age will be in development straight after im done with the personality feature. :)
+the personality feature, the age will be in development straight after im done with the personality feature. :) I also made the change to the linux community (finally!) because Apex Legends is considered bronze on the protondb website. So, if its not working on windows or mac, open an issue and i will take a look into it! I have a windows vm setted-up on QEMU so i could do maintenance on the windows and linux platform only so about mac idk.
 
 <!-- ## How to get the script
 So, you decided to grab the script. Alright, first if you have git, do 
@@ -38,7 +38,7 @@ Ok, so you have decided to not do it the easy way and wanted to build it yoursel
 - The [.NET sdk (Version 5)](https://dotnet.microsoft.com/download/dotnet/5.0)
 - A text editor (Optional) 
 
-After you have buckled up with the prerequisites that i have stated, click on the green button that says ' Code ', click download zip, unzip the file, open a command prompt in the folder and type 'dotnet clean' and then 'dotnet build'. And after you are done! Enjoy this unfinished mess! 
+After you have buckled up with the prerequisites that i have stated, click on the green button that says '''Code''', click download zip, unzip the file, open a command prompt in the folder and type '''dotnet clean''' and then '''dotnet build'''. And after you are done! Enjoy this unfinished mess! 
 
 ## CONTRIBUTING
 If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED__ only as i dont want to waste my free time going through edgy and weird code pulls all day when i have school. 

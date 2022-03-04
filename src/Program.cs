@@ -20,7 +20,7 @@ namespace datingpredic_updated
         static void Main(string[] args)
         {
             //* New sub-classes
-
+            var gCheck = new gender_check();
             user user = new user();
             crush crush = new crush();
             Person Boy = new Person();
@@ -52,7 +52,7 @@ by AmirulDevKun
 
             //ScriptAnim();
 
-            // Prompt for opening personality refrences / definitions.
+            //* Prompt for opening personality refrences / definitions.
             
             void personaResource(string url)
             {
@@ -88,18 +88,57 @@ by AmirulDevKun
                 def.gender = Console.ReadLine();
             }
 
-            if (def.gender == "boy" || def.gender == "man")
-            {
+
+            switch (def.gender) {
+                case "boy":
                 def.finalGender = "boy";
-            }
-            else if (def.gender == "girl" || def.gender == "woman")
-            {
+                break;
+
+                case "man":
+                def.finalGender = "boy";
+                break;
+
+                case "girl":
                 def.finalGender = "girl";
+                break;
+
+                case "woman":
+                def.finalGender = "girl";
+                break;
+
+                default:
+                Console.WriteLine("This script has ended. Please press any key to exit");
+                Console.ReadLine();
+                System.Environment.Exit(0);
+
+                // if(def.gender != "boy") {
+                //     if(def.gender != "man"){
+                //         if(def.gender != "girl"){
+                //             if(def.gender != "woman"){
+                //                 Console.Write("Unrecognizeable gender. Please Reinput: ");
+                //                 def.gender = Console.ReadLine();
+                //             }
+                //         }
+                //     }
+                // }
+                break;
             }
-            else {
-                Console.WriteLine("Gender Input Wrong. Please Put it again");
-                def.gender = Console.ReadLine();
-            }
+            
+            //* not useable because it can be skipped and a bug where
+            //* the str_personality thing will not print the dedicated personality
+            //
+            // if (def.gender == "boy" || def.gender == "man")
+            // {
+            //     def.finalGender = "boy";
+            // }
+            // else if (def.gender == "girl" || def.gender == "woman")
+            // {
+            //     def.finalGender = "girl";
+            // }
+            // else {
+            //     Console.WriteLine("Gender Input Wrong. Please Put it again");
+            //     def.gender = Console.ReadLine();
+            // }
 
             user.check();
             crush.check();
@@ -150,15 +189,15 @@ by AmirulDevKun
             str_personality = "";
         }
 
-        public void personality_check(string personality) {
-            Person Boy = new Person();
-            Person Girl = new Person();
+        // public void personality_check(string personality) {
+        //     Person Boy = new Person();
+        //     Person Girl = new Person();
 
-            Console.Write("Enter your personality here: ");
-            Console.ReadLine();
-            Console.WriteLine();
+        //     Console.Write("Enter your personality here: ");
+        //     Console.ReadLine();
+        //     Console.WriteLine();
 
-        }
+        // }
     }
     class user { //! ADDING NEW FUNCTIONS
 
@@ -229,7 +268,7 @@ by AmirulDevKun
                 {
                     Console.WriteLine();
                     Console.WriteLine("Name cant be empty. Please re-enter your name");
-                    Boy.name = Console.ReadLine();
+                    Girl.name = Console.ReadLine();
                 }
 
                 Console.Write("Enter your age : ");
@@ -337,7 +376,7 @@ by AmirulDevKun
                         break;
                 }
 
-                Console.WriteLine(Girl.name + " " + Girl.age + " " + Girl.personality);
+                Console.WriteLine(Girl.name + " " + Girl.age + " " + Girl.str_personality);
 
             }
             else

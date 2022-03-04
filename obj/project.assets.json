@@ -8,26 +8,24 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\amirulpanda\\.nuget\\packages\\": {}
+    "/home/amirul/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amirulpanda\\Desktop\\datingprediction_updated\\datingpredic_updated.csproj",
+      "projectUniqueName": "/home/amirul/Desktop/Dating-Prediction/datingpredic_updated.csproj",
       "projectName": "datingpredic_updated",
-      "projectPath": "C:\\Users\\amirulpanda\\Desktop\\datingprediction_updated\\datingpredic_updated.csproj",
-      "packagesPath": "C:\\Users\\amirulpanda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amirulpanda\\Desktop\\datingprediction_updated\\obj\\",
+      "projectPath": "/home/amirul/Desktop/Dating-Prediction/datingpredic_updated.csproj",
+      "packagesPath": "/home/amirul/.nuget/packages/",
+      "outputPath": "/home/amirul/Desktop/Dating-Prediction/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\amirulpanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/amirul/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -55,12 +53,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
       }
     }
   }

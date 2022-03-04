@@ -1,0 +1,16 @@
+/home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/datingpredic_updated
+/home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/datingpredic_updated.deps.json
+/home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/datingpredic_updated.runtimeconfig.json
+/home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/datingpredic_updated.runtimeconfig.dev.json
+/home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/datingpredic_updated.dll
+/home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/ref/datingpredic_updated.dll
+/home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/datingpredic_updated.pdb
+/home/amirul/Desktop/Dating-Prediction/obj/Debug/net5.0/datingpredic_updated.csproj.AssemblyReference.cache
+/home/amirul/Desktop/Dating-Prediction/obj/Debug/net5.0/datingpredic_updated.GeneratedMSBuildEditorConfig.editorconfig
+/home/amirul/Desktop/Dating-Prediction/obj/Debug/net5.0/datingpredic_updated.AssemblyInfoInputs.cache
+/home/amirul/Desktop/Dating-Prediction/obj/Debug/net5.0/datingpredic_updated.AssemblyInfo.cs
+/home/amirul/Desktop/Dating-Prediction/obj/Debug/net5.0/datingpredic_updated.csproj.CoreCompileInputs.cache
+/home/amirul/Desktop/Dating-Prediction/obj/Debug/net5.0/datingpredic_updated.dll
+/home/amirul/Desktop/Dating-Prediction/obj/Debug/net5.0/ref/datingpredic_updated.dll
+/home/amirul/Desktop/Dating-Prediction/obj/Debug/net5.0/datingpredic_updated.pdb
+/home/amirul/Desktop/Dating-Prediction/obj/Debug/net5.0/datingpredic_updated.genruntimeconfig.cache
