@@ -1,0 +1,13 @@
+on linux:
+
+the refrences to open a new web browser is openned on the terminal that is running the script.
+
+on windows:
+unknown yet. havent run it in a vm.
+
+on mac os x:
+unknown. im not rich.
+
+common issues:
+
+gender check is not working. Fixed!
