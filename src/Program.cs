@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Collections.Generic;
 
 
@@ -56,7 +57,8 @@ by AmirulDevKun
             
             void personaResource(string url)
             {
-                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true});
+                if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                    Process.Start(new ProcessStartInfo(url));
             }
             
             Console.Write("Do you want to refer the personality resources used? : ");
@@ -78,51 +80,52 @@ by AmirulDevKun
             Console.Clear();
 
             Console.WriteLine(asciiArt);
+            gCheck.check();
 
-            Console.Write("Enter your gender : ");
-            def.gender = Console.ReadLine();
-            Console.WriteLine();
-            while (string.IsNullOrEmpty(def.gender)) {
-                Console.WriteLine();
-                Console.WriteLine("Gender cant be empty. Please re-enter your gender");
-                def.gender = Console.ReadLine();
-            }
+            // Console.Write("Enter your gender : ");
+            // def.gender = Console.ReadLine();
+            // Console.WriteLine();
+            // while (string.IsNullOrEmpty(def.gender)) {
+            //     Console.WriteLine();
+            //     Console.WriteLine("Gender cant be empty. Please re-enter your gender");
+            //     def.gender = Console.ReadLine();
+            // }
 
 
-            switch (def.gender) {
-                case "boy":
-                def.finalGender = "boy";
-                break;
+            // switch (def.gender) {
+            //     case "boy":
+            //     def.finalGender = "boy";
+            //     break;
 
-                case "man":
-                def.finalGender = "boy";
-                break;
+            //     case "man":
+            //     def.finalGender = "boy";
+            //     break;
 
-                case "girl":
-                def.finalGender = "girl";
-                break;
+            //     case "girl":
+            //     def.finalGender = "girl";
+            //     break;
 
-                case "woman":
-                def.finalGender = "girl";
-                break;
+            //     case "woman":
+            //     def.finalGender = "girl";
+            //     break;
 
-                default:
-                Console.WriteLine("This script has ended. Please press any key to exit");
-                Console.ReadLine();
-                System.Environment.Exit(0);
+            //     default:
+            //     Console.WriteLine("This script has ended. Please press any key to exit");
+            //     Console.ReadLine();
+            //     System.Environment.Exit(0);
 
-                // if(def.gender != "boy") {
-                //     if(def.gender != "man"){
-                //         if(def.gender != "girl"){
-                //             if(def.gender != "woman"){
-                //                 Console.Write("Unrecognizeable gender. Please Reinput: ");
-                //                 def.gender = Console.ReadLine();
-                //             }
-                //         }
-                //     }
-                // }
-                break;
-            }
+            //     // if(def.gender != "boy") {
+            //     //     if(def.gender != "man"){
+            //     //         if(def.gender != "girl"){
+            //     //             if(def.gender != "woman"){
+            //     //                 Console.Write("Unrecognizeable gender. Please Reinput: ");
+            //     //                 def.gender = Console.ReadLine();
+            //     //             }
+            //     //         }
+            //     //     }
+            //     // }
+            //     break;
+            // }
             
             //* not useable because it can be skipped and a bug where
             //* the str_personality thing will not print the dedicated personality
