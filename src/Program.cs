@@ -279,7 +279,7 @@ by AmirulDevKun
                 Console.WriteLine();
                 while (!int.TryParse(ageAsString, out Girl.age)) {
                     Console.WriteLine();
-                    Console.WriteLine("Please re-enter your age name.");
+                    Console.WriteLine("Please re-enter your age: ");
                     ageAsString = Console.ReadLine();
                 }
                 perc.lazyPrint();
