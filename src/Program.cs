@@ -315,7 +315,7 @@ by AmirulDevKun
                         break;
                 }
 
-                Console.WriteLine(Girl.name + " " + Girl.age + " " + Girl.personality);
+                Console.WriteLine(Girl.name + " " + Girl.age + " " + Girl.str_personality);
             }
         }
     }
@@ -434,7 +434,7 @@ by AmirulDevKun
                         break;
                 }
 
-                Console.WriteLine(Boy.name + " " + Boy.age + " " + Boy.personality);
+                Console.WriteLine(Boy.name + " " + Boy.age + " " + Boy.str_personality);
 
             }
         }
