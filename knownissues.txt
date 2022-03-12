@@ -10,5 +10,6 @@ unknown. im not rich.
 
 common issues:
 
-gender check is still broken.
+gender check is still broken. its fixed now.
+
 
