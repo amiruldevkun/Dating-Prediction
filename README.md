@@ -38,7 +38,7 @@ Ok, so you have decided to not do it the easy way and wanted to build it yoursel
 - The [.NET sdk (Version 5)](https://dotnet.microsoft.com/download/dotnet/5.0)
 - A text editor (Optional) 
 
-After you have buckled up with the prerequisites that i have stated, click on the green button that says '''Code''', click download zip, unzip the file, open a command prompt in the folder and type '''dotnet clean''' and then '''dotnet build'''. And after you are done! Enjoy this unfinished mess! 
+After you have buckled up with the prerequisites that i have stated, click on the green button that says 'Code', click download zip, unzip the file, open a command prompt in the folder and type 'dotnet clean' and then 'dotnet build'. And after you are done! Enjoy this unfinished mess! 
 
 ## CONTRIBUTING
 If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED__ only as i dont want to waste my free time going through edgy and weird code pulls all day when i have school. 
