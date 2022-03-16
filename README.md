@@ -18,7 +18,7 @@ Lastly, it will try to match you together, by taking personality and age into co
 # IMPORTANT
 
 This program is currently __UNDER DEVELOPMENT__ so expect unfinished-ness and bugs. The feature that is in development is 
-the personality feature, the age will be in development straight after im done with the personality feature. :) I also made the change to the linux community (finally!) because Apex Legends is considered bronze on the protondb website. So, if its not working on windows or mac, open an issue and i will take a look into it! I have a windows vm setted-up on QEMU so i could do maintenance on the windows and linux platform only so about mac idk.
+the personality feature, the age will be in development straight after im done with the personality feature. :) I also made the change to the linux community (finally!) because Apex Legends is steam deck verified on protonDB. So, if its not working on windows or mac, open an issue and i will take a look into it! I have a windows vm setted-up on QEMU so i could do maintenance on the windows and linux platform only so about mac idk.
 
 <!-- ## How to get the script
 So, you decided to grab the script. Alright, first if you have git, do 
