@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Collections.Generic;
+
 
 
 /*
@@ -57,8 +57,25 @@ by AmirulDevKun
             
             void personaResource(string url)
             {
-                if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                    Process.Start(new ProcessStartInfo(url));
+                if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux)){
+                    Console.WriteLine("I AM LINUX");
+                    Process Proc = new System.Diagnostics.Process();
+                    Proc.StartInfo.FileName = "/usr/bin/firefox";
+                    Proc.StartInfo.Arguments = url;
+                    Proc.Start();
+                }
+                else if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) {
+                    Console.WriteLine("FORCED TELEMETRY IS COOL!!");
+                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}"));
+                }
+                else if(RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) {
+                    Console.WriteLine("I PAY EXCESSIVE AMOUNT OF MONEY FOR SHIT HARDWARE");
+                    Process.Start("open", url);
+                }
+                else {
+                    Console.WriteLine("idk man. your os is weird");
+                    System.Environment.Exit(0);
+                }
             }
             
             Console.Write("Do you want to refer the personality resources used? : ");
@@ -67,14 +84,23 @@ by AmirulDevKun
             {
                 case "y":
                     personaResource(url);
+                    Console.WriteLine("When your browser closes, press anything to continue (ignore the gtk message)");
+                    Console.ReadKey();
                     break;
                 case "yes":
                     personaResource(url);
+                    Console.WriteLine("When your browser closes, press anything to continue");
+                    Console.ReadKey();
                     break;
                 case "Yes":
                     personaResource(url);
+                    Console.WriteLine("When your browser closes, press anything to continue");
+                    Console.ReadKey();
                     break;
                 default:
+                    Console.Write("Don't worry, you can always refer the resources later.\n");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey();
                     break;
             }
             Console.Clear();
@@ -82,53 +108,8 @@ by AmirulDevKun
             Console.WriteLine(asciiArt);
             gCheck.check();
 
-            // Console.Write("Enter your gender : ");
-            // def.gender = Console.ReadLine();
-            // Console.WriteLine();
-            // while (string.IsNullOrEmpty(def.gender)) {
-            //     Console.WriteLine();
-            //     Console.WriteLine("Gender cant be empty. Please re-enter your gender");
-            //     def.gender = Console.ReadLine();
-            // }
-
-
-            // switch (def.gender) {
-            //     case "boy":
-            //     def.finalGender = "boy";
-            //     break;
-
-            //     case "man":
-            //     def.finalGender = "boy";
-            //     break;
-
-            //     case "girl":
-            //     def.finalGender = "girl";
-            //     break;
-
-            //     case "woman":
-            //     def.finalGender = "girl";
-            //     break;
-
-            //     default:
-            //     Console.WriteLine("This script has ended. Please press any key to exit");
-            //     Console.ReadLine();
-            //     System.Environment.Exit(0);
-
-            //     // if(def.gender != "boy") {
-            //     //     if(def.gender != "man"){
-            //     //         if(def.gender != "girl"){
-            //     //             if(def.gender != "woman"){
-            //     //                 Console.Write("Unrecognizeable gender. Please Reinput: ");
-            //     //                 def.gender = Console.ReadLine();
-            //     //             }
-            //     //         }
-            //     //     }
-            //     // }
-            //     break;
-            // }
-            
-            //* not useable because it can be skipped and a bug where
-            //* the str_personality thing will not print the dedicated personality
+            //! not useable because it can be skipped and a bug where
+            //! the str_personality thing will not print the dedicated personality
             //
             // if (def.gender == "boy" || def.gender == "man")
             // {
@@ -191,16 +172,6 @@ by AmirulDevKun
             gender = "";
             str_personality = "";
         }
-
-        // public void personality_check(string personality) {
-        //     Person Boy = new Person();
-        //     Person Girl = new Person();
-
-        //     Console.Write("Enter your personality here: ");
-        //     Console.ReadLine();
-        //     Console.WriteLine();
-
-        // }
     }
     class user { //! ADDING NEW FUNCTIONS
 

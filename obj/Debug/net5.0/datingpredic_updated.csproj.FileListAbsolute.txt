@@ -1,3 +1,17 @@
+/home/amirul/Desktop/Dating-Prediction/linux/datingpredic_updated
+/home/amirul/Desktop/Dating-Prediction/linux/datingpredic_updated.deps.json
+/home/amirul/Desktop/Dating-Prediction/linux/datingpredic_updated.runtimeconfig.json
+/home/amirul/Desktop/Dating-Prediction/linux/datingpredic_updated.runtimeconfig.dev.json
+/home/amirul/Desktop/Dating-Prediction/linux/datingpredic_updated.dll
+/home/amirul/Desktop/Dating-Prediction/linux/ref/datingpredic_updated.dll
+/home/amirul/Desktop/Dating-Prediction/linux/datingpredic_updated.pdb
+/home/amirul/Desktop/Dating-Prediction/linux-build/datingpredic_updated
+/home/amirul/Desktop/Dating-Prediction/linux-build/datingpredic_updated.deps.json
+/home/amirul/Desktop/Dating-Prediction/linux-build/datingpredic_updated.runtimeconfig.json
+/home/amirul/Desktop/Dating-Prediction/linux-build/datingpredic_updated.runtimeconfig.dev.json
+/home/amirul/Desktop/Dating-Prediction/linux-build/datingpredic_updated.dll
+/home/amirul/Desktop/Dating-Prediction/linux-build/ref/datingpredic_updated.dll
+/home/amirul/Desktop/Dating-Prediction/linux-build/datingpredic_updated.pdb
 /home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/datingpredic_updated
 /home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/datingpredic_updated.deps.json
 /home/amirul/Desktop/Dating-Prediction/bin/Debug/net5.0/datingpredic_updated.runtimeconfig.json
