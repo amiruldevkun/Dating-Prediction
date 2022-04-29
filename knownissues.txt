@@ -8,8 +8,12 @@ unknown yet. havent run it in a vm.
 on mac os x:
 unknown. im not rich.
 
-common issues:
+issues:
 
 gender check is still broken. its fixed now.
 
 
+TODO:
+finish dbaccess.cs .
+integrate database with the main program.
+finish up predictions.

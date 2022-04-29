@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
-
+using datingpredic_updated;
 
 /*
 TODO: Finish meaning class
@@ -50,7 +50,7 @@ namespace datingpredic_updated
 
 by AmirulDevKun
                 ";
-
+            Console.WriteLine("Running dbAccess.cs");
             //ScriptAnim();
 
             //* Prompt for opening personality refrences / definitions.
@@ -59,8 +59,8 @@ by AmirulDevKun
             {
                 if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                     Process.Start(new ProcessStartInfo(url));
-            }
-            
+            } 
+            dbAccess.openConn();
             Console.Write("Do you want to refer the personality resources used? : ");
             string input = Console.ReadLine();
             switch (input)
@@ -79,70 +79,13 @@ by AmirulDevKun
             }
             Console.Clear();
 
+            //* Drawing the ascii art
             Console.WriteLine(asciiArt);
+
+            //* Prompt for gender check
             gCheck.check();
 
-            // Console.Write("Enter your gender : ");
-            // def.gender = Console.ReadLine();
-            // Console.WriteLine();
-            // while (string.IsNullOrEmpty(def.gender)) {
-            //     Console.WriteLine();
-            //     Console.WriteLine("Gender cant be empty. Please re-enter your gender");
-            //     def.gender = Console.ReadLine();
-            // }
-
-
-            // switch (def.gender) {
-            //     case "boy":
-            //     def.finalGender = "boy";
-            //     break;
-
-            //     case "man":
-            //     def.finalGender = "boy";
-            //     break;
-
-            //     case "girl":
-            //     def.finalGender = "girl";
-            //     break;
-
-            //     case "woman":
-            //     def.finalGender = "girl";
-            //     break;
-
-            //     default:
-            //     Console.WriteLine("This script has ended. Please press any key to exit");
-            //     Console.ReadLine();
-            //     System.Environment.Exit(0);
-
-            //     // if(def.gender != "boy") {
-            //     //     if(def.gender != "man"){
-            //     //         if(def.gender != "girl"){
-            //     //             if(def.gender != "woman"){
-            //     //                 Console.Write("Unrecognizeable gender. Please Reinput: ");
-            //     //                 def.gender = Console.ReadLine();
-            //     //             }
-            //     //         }
-            //     //     }
-            //     // }
-            //     break;
-            // }
-            
-            //* not useable because it can be skipped and a bug where
-            //* the str_personality thing will not print the dedicated personality
-            //
-            // if (def.gender == "boy" || def.gender == "man")
-            // {
-            //     def.finalGender = "boy";
-            // }
-            // else if (def.gender == "girl" || def.gender == "woman")
-            // {
-            //     def.finalGender = "girl";
-            // }
-            // else {
-            //     Console.WriteLine("Gender Input Wrong. Please Put it again");
-            //     def.gender = Console.ReadLine();
-            // }
-
+            //* main program
             user.check();
             crush.check();
             //perc.lazyPrint();
