@@ -2,8 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
+<<<<<<< Updated upstream:datingpredic_updated.csproj
     <TargetFramework>net5.0</TargetFramework>
     
+=======
+    <TargetFramework>net6.0</TargetFramework>
+>>>>>>> Stashed changes:Dating-Prediction.csproj
   </PropertyGroup>
 
   <ItemGroup>

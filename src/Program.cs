@@ -50,7 +50,6 @@ namespace datingpredic_updated
 
 by AmirulDevKun
                 ";
-            Console.WriteLine("Running dbAccess.cs");
             //ScriptAnim();
 
             //* Prompt for opening personality refrences / definitions.
@@ -60,7 +59,6 @@ by AmirulDevKun
                 if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                     Process.Start(new ProcessStartInfo(url));
             } 
-            dbAccess.openConn();
             Console.Write("Do you want to refer the personality resources used? : ");
             string input = Console.ReadLine();
             switch (input)
@@ -419,34 +417,6 @@ by AmirulDevKun
             Console.WriteLine("5." + PP[4]);
 
             Console.WriteLine();
-        }
-
-        //public void finalize() {
-        //    Person Boy = new Person();
-        //    Person Girl = new Person();
-        //    predictions perc = new predictions();
-
-        //    var rand = new Random();
-        //    var percentage = rand.Next(1, 100);
-        //    if (percentage > 50) {
-        //        Console.WriteLine("Good Job!");
-        //    }
-        //    else {
-        //        Console.WriteLine("You need to work on your personality");
-        //    }
-        //}
-
-        public static void whichPersonality() //using logic to determine if the personality is compatible
-        {
-            Person Boy = new Person();
-            Person Girl = new Person();
-            Program p = new Program();
-
-            if (Boy.personality == 1 && Girl.personality == 3 || Boy.personality == 3 && Girl.personality == 1)
-            {
-                Console.WriteLine("You might have an opportunity. Take it when you see it");
-            } 
-
         }
     }
 }
