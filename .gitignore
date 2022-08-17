@@ -398,6 +398,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+<<<<<<< HEAD
 bin/Release/net5.0/publish.zip
 bin/Release/net5.0/publish/datingpredic_updated.deps.json
 bin/Release/net5.0/datingpredic_updated.runtimeconfig.dev.json
@@ -436,3 +437,9 @@ Properties/PublishProfiles/FolderProfile.pubxml
 obj/Release/net5.0/ref/datingpredic_updated.dll
 Properties/PublishProfiles/FolderProfile.pubxml.user
 src/predictions
+=======
+
+linux_build/
+linux_publish/
+windows_publish/
+>>>>>>> main

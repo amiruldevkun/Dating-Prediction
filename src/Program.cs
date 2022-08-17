@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+<<<<<<< HEAD
 using System.Collections.Generic;
 using datingpredic_updated;
+=======
+
+
+>>>>>>> main
 
 /*
 TODO: Finish this program once and for all
@@ -56,23 +61,56 @@ by AmirulDevKun
             
             void personaResource(string url)
             {
+<<<<<<< HEAD
                 if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                     Process.Start(new ProcessStartInfo(url));
             } 
+=======
+                if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux)){
+                    Console.WriteLine("I AM LINUX");
+                    Process Proc = new System.Diagnostics.Process();
+                    Proc.StartInfo.FileName = "/usr/bin/firefox";
+                    Proc.StartInfo.Arguments = url;
+                    Proc.Start();
+                }
+                else if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) {
+                    Console.WriteLine("FORCED TELEMETRY IS COOL!!");
+                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}"));
+                }
+                else if(RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) {
+                    Console.WriteLine("I PAY EXCESSIVE AMOUNT OF MONEY FOR SHIT HARDWARE");
+                    Process.Start("open", url);
+                }
+                else {
+                    Console.WriteLine("idk man. your os is weird");
+                    System.Environment.Exit(0);
+                }
+            }
+            
+>>>>>>> main
             Console.Write("Do you want to refer the personality resources used? : ");
             string input = Console.ReadLine();
             switch (input)
             {
                 case "y":
                     personaResource(url);
+                    Console.WriteLine("When your browser closes, press anything to continue (ignore the gtk message)");
+                    Console.ReadKey();
                     break;
                 case "yes":
                     personaResource(url);
+                    Console.WriteLine("When your browser closes, press anything to continue");
+                    Console.ReadKey();
                     break;
                 case "Yes":
                     personaResource(url);
+                    Console.WriteLine("When your browser closes, press anything to continue");
+                    Console.ReadKey();
                     break;
                 default:
+                    Console.Write("Don't worry, you can always refer the resources later.\n");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey();
                     break;
             }
             Console.Clear();
@@ -83,7 +121,26 @@ by AmirulDevKun
             //* Prompt for gender check
             gCheck.check();
 
+<<<<<<< HEAD
             //* main program
+=======
+            //! not useable because it can be skipped and a bug where
+            //! the str_personality thing will not print the dedicated personality
+            //
+            // if (def.gender == "boy" || def.gender == "man")
+            // {
+            //     def.finalGender = "boy";
+            // }
+            // else if (def.gender == "girl" || def.gender == "woman")
+            // {
+            //     def.finalGender = "girl";
+            // }
+            // else {
+            //     Console.WriteLine("Gender Input Wrong. Please Put it again");
+            //     def.gender = Console.ReadLine();
+            // }
+
+>>>>>>> main
             user.check();
             crush.check();
             //perc.lazyPrint();
