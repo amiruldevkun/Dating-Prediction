@@ -435,3 +435,4 @@ obj/Release/net5.0/PublishOutputs.dc39bbc148.txt
 Properties/PublishProfiles/FolderProfile.pubxml
 obj/Release/net5.0/ref/datingpredic_updated.dll
 Properties/PublishProfiles/FolderProfile.pubxml.user
+src/predictions

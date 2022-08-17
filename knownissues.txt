@@ -1,19 +1,16 @@
 on linux:
 
-the refrences to open a new web browser is openned on the terminal that is running the script.
+the refrences to open a new web browser is openned on the terminal that is running the script. Done
 
 on windows:
-unknown yet. havent run it in a vm.
+On testing
 
 on mac os x:
-unknown. im not rich.
-
-issues:
-
-gender check is still broken. its fixed now.
-
+unknown.
 
 TODO:
-finish dbaccess.cs .
-integrate database with the main program.
-finish up predictions.
+finish dbaccess.cs X (ruled out because what's the point of it.)
+integrate database with the main program. X (overruled with the same reason uptop)
+finish up predictions. X
+
+general bugs:

@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using datingpredic_updated;
 
 /*
-TODO: Finish meaning class
-TODO: Clean more stuff
+TODO: Finish this program once and for all
+TODO: release final
 */
 
 namespace datingpredic_updated
@@ -26,7 +26,7 @@ namespace datingpredic_updated
             crush crush = new crush();
             Person Boy = new Person();
             Person Girl = new Person();
-            var perc = new predictions();
+            var perc = new personalities();
             def d = new def();
             string url = "https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits";
 
@@ -132,23 +132,14 @@ by AmirulDevKun
             gender = "";
             str_personality = "";
         }
-
-        // public void personality_check(string personality) {
-        //     Person Boy = new Person();
-        //     Person Girl = new Person();
-
-        //     Console.Write("Enter your personality here: ");
-        //     Console.ReadLine();
-        //     Console.WriteLine();
-
-        // }
     }
+
     class user { //! ADDING NEW FUNCTIONS
 
         public void check() {
             Person Boy = new Person();
             Person Girl = new Person();
-            var perc = new predictions();
+            personalities perc = new personalities();
             Program.def d = new Program.def();
             if (Program.def.finalGender == "boy") {
                 //* This part is pretty complicated... OH WHO AM I KIDDING!
@@ -265,7 +256,7 @@ by AmirulDevKun
         public void check() {
             Person Boy = new Person();
             Person Girl = new Person();
-            var perc = new predictions();
+            personalities perc = new personalities();
             Program.def d = new Program.def();
 
             if (Program.def.finalGender == "boy") {
@@ -380,7 +371,7 @@ by AmirulDevKun
             }
         }
     }
-    class predictions
+    class personalities
     {
         private static string pers1;
         private static string pers2;
@@ -390,14 +381,13 @@ by AmirulDevKun
         //private bool cool_bool;
         public readonly string[] PP = { pers1, pers2, pers3, pers4, pers5 };
 
-        public predictions()
+        public personalities()
         {
-            pers1 = "Openness";
-            pers2 = "Conscientiousness";
-            pers3 = "Extraversion";
-            pers4 = "Agreeableness";
-            pers5 = "Neuroticism";
-            //cool_bool = true;
+            pers1 = "Openness"; //? curiosity and creativity
+            pers2 = "Conscientiousness"; //? organized and clean
+            pers3 = "Extraversion"; //? extrovert and socialable
+            pers4 = "Agreeableness"; //? understanding and softie
+            pers5 = "Neuroticism"; //? 
         }
 
         //! Lazy implementation of array printing.
