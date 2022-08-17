@@ -1,13 +1,7 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-<<<<<<< HEAD
-using System.Collections.Generic;
-using datingpredic_updated;
-=======
 
-
->>>>>>> main
 
 /*
 TODO: Finish this program once and for all
@@ -61,11 +55,7 @@ by AmirulDevKun
             
             void personaResource(string url)
             {
-<<<<<<< HEAD
-                if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                    Process.Start(new ProcessStartInfo(url));
-            } 
-=======
+
                 if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux)){
                     Console.WriteLine("I AM LINUX");
                     Process Proc = new System.Diagnostics.Process();
@@ -87,7 +77,7 @@ by AmirulDevKun
                 }
             }
             
->>>>>>> main
+
             Console.Write("Do you want to refer the personality resources used? : ");
             string input = Console.ReadLine();
             switch (input)
@@ -118,12 +108,6 @@ by AmirulDevKun
             //* Drawing the ascii art
             Console.WriteLine(asciiArt);
 
-            //* Prompt for gender check
-            gCheck.check();
-
-<<<<<<< HEAD
-            //* main program
-=======
             //! not useable because it can be skipped and a bug where
             //! the str_personality thing will not print the dedicated personality
             //
@@ -140,7 +124,7 @@ by AmirulDevKun
             //     def.gender = Console.ReadLine();
             // }
 
->>>>>>> main
+
             user.check();
             crush.check();
             //perc.lazyPrint();

@@ -1,21 +1,5 @@
 on linux:
-<<<<<<< HEAD
 
-the refrences to open a new web browser is openned on the terminal that is running the script. Done
-
-on windows:
-On testing
-
-on mac os x:
-unknown.
-
-TODO:
-finish dbaccess.cs X (ruled out because what's the point of it.)
-integrate database with the main program. X (overruled with the same reason uptop)
-finish up predictions. X
-
-general bugs:
-=======
 the refrences to open a new web browser is openned on the terminal that is running the script. /
 
 on windows:
@@ -40,4 +24,4 @@ explicitly use 'dotnet build -o linux-build' for linux users.
 you gotta clean up the files in the linux-build directory to rebuild again as because 'dotnet clean' doesnt work on seperate directories.
 
 explicitly use the built-in tasks for windows users or 'dotnet build'.
->>>>>>> main
+

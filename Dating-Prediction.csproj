@@ -2,12 +2,9 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-<<<<<<< HEAD:datingpredic_updated.csproj
-    <TargetFramework>net6.0</TargetFramework>
-  </PropertyGroup>
-=======
+
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
->>>>>>> main:Dating-Prediction.csproj
+
 </Project>
