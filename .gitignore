@@ -27,10 +27,12 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
-[Oo]bj/
+bin/
+obj/
 [Ll]og/
 [Ll]ogs/
+windows-build/
+linux-build/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -397,6 +399,9 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+
+
 linux_build/
 linux_publish/
 windows_publish/
+

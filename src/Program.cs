@@ -1,12 +1,11 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 
-
 /*
-TODO: Finish meaning class
-TODO: Clean more stuff
+TODO: Finish this program once and for all
+TODO: release final
 */
 
 namespace datingpredic_updated
@@ -26,7 +25,7 @@ namespace datingpredic_updated
             crush crush = new crush();
             Person Boy = new Person();
             Person Girl = new Person();
-            var perc = new predictions();
+            var perc = new personalities();
             def d = new def();
             string url = "https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits";
 
@@ -50,13 +49,13 @@ namespace datingpredic_updated
 
 by AmirulDevKun
                 ";
-
             //ScriptAnim();
 
             //* Prompt for opening personality refrences / definitions.
             
             void personaResource(string url)
             {
+
                 if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux)){
                     Console.WriteLine("I AM LINUX");
                     Process Proc = new System.Diagnostics.Process();
@@ -78,6 +77,7 @@ by AmirulDevKun
                 }
             }
             
+
             Console.Write("Do you want to refer the personality resources used? : ");
             string input = Console.ReadLine();
             switch (input)
@@ -105,8 +105,8 @@ by AmirulDevKun
             }
             Console.Clear();
 
+            //* Drawing the ascii art
             Console.WriteLine(asciiArt);
-            gCheck.check();
 
             //! not useable because it can be skipped and a bug where
             //! the str_personality thing will not print the dedicated personality
@@ -123,6 +123,7 @@ by AmirulDevKun
             //     Console.WriteLine("Gender Input Wrong. Please Put it again");
             //     def.gender = Console.ReadLine();
             // }
+
 
             user.check();
             crush.check();
@@ -173,12 +174,13 @@ by AmirulDevKun
             str_personality = "";
         }
     }
+
     class user { //! ADDING NEW FUNCTIONS
 
         public void check() {
             Person Boy = new Person();
             Person Girl = new Person();
-            var perc = new predictions();
+            personalities perc = new personalities();
             Program.def d = new Program.def();
             if (Program.def.finalGender == "boy") {
                 //* This part is pretty complicated... OH WHO AM I KIDDING!
@@ -286,7 +288,7 @@ by AmirulDevKun
                         break;
                 }
 
-                Console.WriteLine(Girl.name + " " + Girl.age + " " + Girl.personality);
+                Console.WriteLine(Girl.name + " " + Girl.age + " " + Girl.str_personality);
             }
         }
     }
@@ -295,7 +297,7 @@ by AmirulDevKun
         public void check() {
             Person Boy = new Person();
             Person Girl = new Person();
-            var perc = new predictions();
+            personalities perc = new personalities();
             Program.def d = new Program.def();
 
             if (Program.def.finalGender == "boy") {
@@ -405,12 +407,12 @@ by AmirulDevKun
                         break;
                 }
 
-                Console.WriteLine(Boy.name + " " + Boy.age + " " + Boy.personality);
+                Console.WriteLine(Boy.name + " " + Boy.age + " " + Boy.str_personality);
 
             }
         }
     }
-    class predictions
+    class personalities
     {
         private static string pers1;
         private static string pers2;
@@ -420,14 +422,13 @@ by AmirulDevKun
         //private bool cool_bool;
         public readonly string[] PP = { pers1, pers2, pers3, pers4, pers5 };
 
-        public predictions()
+        public personalities()
         {
-            pers1 = "Openness";
-            pers2 = "Conscientiousness";
-            pers3 = "Extraversion";
-            pers4 = "Agreeableness";
-            pers5 = "Neuroticism";
-            //cool_bool = true;
+            pers1 = "Openness"; //? curiosity and creativity
+            pers2 = "Conscientiousness"; //? organized and clean
+            pers3 = "Extraversion"; //? extrovert and socialable
+            pers4 = "Agreeableness"; //? understanding and softie
+            pers5 = "Neuroticism"; //? 
         }
 
         //! Lazy implementation of array printing.
@@ -447,34 +448,6 @@ by AmirulDevKun
             Console.WriteLine("5." + PP[4]);
 
             Console.WriteLine();
-        }
-
-        //public void finalize() {
-        //    Person Boy = new Person();
-        //    Person Girl = new Person();
-        //    predictions perc = new predictions();
-
-        //    var rand = new Random();
-        //    var percentage = rand.Next(1, 100);
-        //    if (percentage > 50) {
-        //        Console.WriteLine("Good Job!");
-        //    }
-        //    else {
-        //        Console.WriteLine("You need to work on your personality");
-        //    }
-        //}
-
-        public static void whichPersonality() //using logic to determine if the personality is compatible
-        {
-            Person Boy = new Person();
-            Person Girl = new Person();
-            Program p = new Program();
-
-            if (Boy.personality == 1 && Girl.personality == 3 || Boy.personality == 3 && Girl.personality == 1)
-            {
-                Console.WriteLine("You might have an opportunity. Take it when you see it");
-            } 
-
         }
     }
 }
