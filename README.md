@@ -44,7 +44,7 @@ Ok, so you have decided to not do it the easy way and wanted to build it yoursel
 - A text editor (Optional) 
 
 
-After you have buckled up with the prerequisites that i have stated, click on the green button that says `Code`, click download zip, unzip the file, open a command prompt in the folder and type `dotnet clean` and then `dotnet build`. And after you are done! Enjoy this project! 
+After you have buckled up with the prerequisites that i have stated, click on the green button that says `Code`, click download zip, unzip the file, open a command prompt in the folder and type `dotnet clean` and then `dotnet build`. And after you are done! Enjoy this project! (I also have a tendency to push code to the main branch cuz im dumb.)
 
 ## CONTRIBUTING
 If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED__ only as i dont want to waste my free time going through edgy and weird code pulls all day when i have school. 
