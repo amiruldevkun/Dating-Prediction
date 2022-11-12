@@ -107,24 +107,7 @@ by AmirulDevKun
 
             //* Drawing the ascii art
             Console.WriteLine(asciiArt);
-
-            //! not useable because it can be skipped and a bug where
-            //! the str_personality thing will not print the dedicated personality
-            //
-            // if (def.gender == "boy" || def.gender == "man")
-            // {
-            //     def.finalGender = "boy";
-            // }
-            // else if (def.gender == "girl" || def.gender == "woman")
-            // {
-            //     def.finalGender = "girl";
-            // }
-            // else {
-            //     Console.WriteLine("Gender Input Wrong. Please Put it again");
-            //     def.gender = Console.ReadLine();
-            // }
-
-
+            
             user.check();
             crush.check();
             //perc.lazyPrint();
@@ -424,11 +407,11 @@ by AmirulDevKun
 
         public personalities()
         {
-            pers1 = "Openness"; //? curiosity and creativity
-            pers2 = "Conscientiousness"; //? organized and clean
-            pers3 = "Extraversion"; //? extrovert and socialable
+            pers1 = "Openness"; //? curious and open about new things
+            pers2 = "Conscientiousness"; //? organized and keen
+            pers3 = "Extraversion"; //? high energy and socialable
             pers4 = "Agreeableness"; //? understanding and softie
-            pers5 = "Neuroticism"; //? 
+            pers5 = "Neuroticism"; //? react badly to high stress situation
         }
 
         //! Lazy implementation of array printing.
