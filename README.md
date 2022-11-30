@@ -1,4 +1,4 @@
-# DATING PREDICTIONS (C# VERSION)
+# DATING PREDICTIONS
 A dating prediction cli script to see if you have a chance with the person that catches your eye.
 
 ## Why did i make this?
