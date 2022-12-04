@@ -55,6 +55,8 @@ a list of users using and their crushes. They can also see the percentage (if i 
 
 - Add percentages
 
+- Add tests
+
 ## HOW-TO
 Go to the [releases]("https://github.com/amiruldevkun/Dating-Prediction/releases") tab and grab the latest one (as you should on any other thing).
 
