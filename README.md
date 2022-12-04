@@ -10,7 +10,13 @@ But, if you like being embarrased or just playing around, then go straight to th
 You could also contribute to this mess, if you want to that is.
 
 ## TABLE OF CONTENTS
-
+[IMPORTANT](https://github.com/amiruldevkun/Dating-Prediction#important)
+[GOALS](https://github.com/amiruldevkun/Dating-Prediction#goals)
+[HOW-TO](https://github.com/amiruldevkun/Dating-Prediction#how-to)
+[BUILDING](https://github.com/amiruldevkun/Dating-Prediction#building)
+[CONTRIBUTING](https://github.com/amiruldevkun/Dating-Prediction#contributing)
+[HELP INQUIRIES](https://github.com/amiruldevkun/Dating-Prediction#help-inquires)
+[RESOURCES && EXTRA CREDITS](https://github.com/amiruldevkun/Dating-Prediction#resources--extra-credits)
 
 
 ## How does this script works?
@@ -63,28 +69,48 @@ If you are on windows:
 
 If you want to build it from [source]("https://github.com/amiruldevkun/Dating-Prediction#building"), its under this section.
 
-Just keep in mind that this code is __UNPOLISHED__ , __UNFINISHED__ and __WILL__ have bugs. If thats the case, you can either contribute by git cloning and making a pull request or shoot me a dm through twitter cuz thats the only place i have dms open.
+No need for installing any dependencies as for every single release, I will build it with the `-self_contained` flag so that you do not need to go through the hassle of installing runtimes!
 
 ## BUILDING
 Ok, so you have decided to not do it the easy way and wanted to build it yourself. So, these are the prerequisites.
 
-- The [.NET sdk (Version 5)](https://dotnet.microsoft.com/download/dotnet/5.0)
+- The [.NET sdk (Version 6)](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- Visual Studio 2022 (or any IDEs really)
 - A text editor (Optional) 
 
+Download the sdk using your prefered way, by an installer or winget. Your choice of the text editor or IDEs is up to you.
 
-After you have buckled up with the prerequisites that i have stated, click on the green button that says `Code`, click download zip, unzip the file, open a command prompt in the folder and type `dotnet clean` and then `dotnet build`. And after you are done! Enjoy this project! (I also have a tendency to push code to the main branch cuz im dumb.)
+You can choose Rider, Visual Studio Code, Visual Studio 2022, Notepad++ or anything. The only important thing is that you have a terminal that can execute and build
+
+the project using 
+
+```
+dotnet build
+```
+
+**OR**
+
+```
+dotnet run
+```
+
+After you have buckled up with the prerequisites that i have stated, click on the green button that says `Code`, 
+
+click download zip, unzip the file, open a command prompt in the folder and type `dotnet clean` and then `dotnet build`. 
+
+And after you are done! Enjoy this project!
 
 ## CONTRIBUTING
-If you want to contribute to this mess, make a pull request(s) __THAT IS NEEDED__ only as i dont want to waste my free time going through edgy and weird code pulls all day when i have school. 
+If you want to contribute to this mess, make a pull request(s) anytime but I might see it late as I dont have too much free time going through code changes when i have school. 
 
-Fork this repo if you want, but please refer back to this repo. Also becoz i dont have any explicit way to contribute but use common sense please. The dedicated file will be made for how to really contribute.
+Fork this repo if you want, but please credit my project.
 
 ## HELP INQUIRES 
-If you need help you can tag me on twitter or dm me, since i dont have anyone with perms to keep the repo going, i might not respond fast so keep that in mind.
+If you need help you can tag me on [twitter](https://twitter.com/amirulplays) or dm me, since i dont have anyone with perms to keep the repo going, i might not respond fast so keep that in mind.
 
 
 ### RESOURCES && EXTRA CREDITS
 https://github.com/amiruldevkun/datingpredictions <br />
-https://dotnet.microsoft.com/download/dotnet/5.0 <br />
+https://dotnet.microsoft.com/en-us/download/dotnet/6.0 <br />
 https://twitter.com/amirulplays <br />
 [ProgramBar Source Code (Thank you Daniel!)](https://gist.github.com/DanielSWolf/0ab6a96899cc5377bf54)
