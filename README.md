@@ -2,7 +2,15 @@
 A dating prediction cli script to see if you have a chance with the person that catches your eye.
 
 ## Why did i make this?
-Because i was bored and wanted to do something in my free time. Its not useful in anykind, but feel free to try it out i guess. It is not accurate by any chance, so if you value your integrity and don't want to embarrass your self, please step away. But, if you like being embarrased or just playing around, then go straight to the [how-to section](https://github.com/amiruldevkun/Dating-Prediction#how-to) section. You could also contribute to this mess, if you want to that is.
+
+Because i was bored and wanted to do something in my free time. Its not useful in anykind, 
+but feel free to try it out i guess. It is not accurate by any chance, so if you value your 
+integrity and don't want to embarrass your self, please step away. 
+But, if you like being embarrased or just playing around, then go straight to the [how-to section](https://github.com/amiruldevkun/Dating-Prediction#how-to) section. 
+You could also contribute to this mess, if you want to that is.
+
+## TABLE OF CONTENTS
+
 
 
 ## How does this script works?
@@ -13,13 +21,33 @@ Secondly, it will take your age name and personality, the same goes for the crus
 
 Lastly, it will try to match you together, by taking personality and age into consideration.
 
-(stolen from this, my old [python](https://github.com/amiruldevkun/datingpredictions) repo)
+(explanation is from my old [python](https://github.com/amiruldevkun/datingpredictions) repo
+
+## Why use C# when you already have a python repo with the same goal?
+
+The reason why I use C# instead of python is because python doesn't have the features that I needed for this project specifically and because I wanted to learn
+new languages too. C# also have a lot in common with java like how the syntax works and how the code kinda written. 
+
+## The obstacles when making this project
+
+One of the obstacles that I have faced when making this project was with my understanding with personalities. But after I have understanded that, the next
+problem lies with the code is not giving me the place where the error originated like a small semi-colon mistake make everything underlined with red squiggly lines
+and making it hard to identify the mistake.
 
 # IMPORTANT
 
 This program is currently __UNDER DEVELOPMENT__ so expect unfinished-ness and bugs. The feature that is in development is 
 the personality feature, the age will be in development straight after im done with the personality feature. Currently messing around with sqlite3 and making a database for
 a list of users using and their crushes. They can also see the percentage (if i finish it...) with the crush that they inputted. That would be cool.
+
+
+## GOALS
+
+- Implement a GUI
+
+- Add a database for recently made predictions
+
+- Add percentages
 
 ## HOW-TO
 Go to the [releases]("https://github.com/amiruldevkun/Dating-Prediction/releases") tab and grab the latest one (as you should on any other thing).
