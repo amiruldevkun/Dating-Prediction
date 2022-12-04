@@ -10,13 +10,13 @@ But, if you like being embarrased or just playing around, then go straight to th
 You could also contribute to this mess, if you want to that is.
 
 ## TABLE OF CONTENTS
-[IMPORTANT](https://github.com/amiruldevkun/Dating-Prediction#important)
-[GOALS](https://github.com/amiruldevkun/Dating-Prediction#goals)
-[HOW-TO](https://github.com/amiruldevkun/Dating-Prediction#how-to)
-[BUILDING](https://github.com/amiruldevkun/Dating-Prediction#building)
-[CONTRIBUTING](https://github.com/amiruldevkun/Dating-Prediction#contributing)
-[HELP INQUIRIES](https://github.com/amiruldevkun/Dating-Prediction#help-inquires)
-[RESOURCES && EXTRA CREDITS](https://github.com/amiruldevkun/Dating-Prediction#resources--extra-credits)
+- [IMPORTANT](https://github.com/amiruldevkun/Dating-Prediction#important)
+- [GOALS](https://github.com/amiruldevkun/Dating-Prediction#goals)
+- [HOW-TO](https://github.com/amiruldevkun/Dating-Prediction#how-to)
+- [BUILDING](https://github.com/amiruldevkun/Dating-Prediction#building)
+- [CONTRIBUTING](https://github.com/amiruldevkun/Dating-Prediction#contributing)
+- [HELP INQUIRIES](https://github.com/amiruldevkun/Dating-Prediction#help-inquires)
+- [RESOURCES && EXTRA CREDITS](https://github.com/amiruldevkun/Dating-Prediction#resources--extra-credits)
 
 
 ## How does this script works?
