@@ -1,3 +1,2 @@
-explicitly use 'dotnet build -o linux-build' for linux users.
-
-explicitly use 'dotnet build -o windows-build -r win-x64 --self-contained true'
+explicitly use 'dotnet build -o linux_build --os linux' for linux.
+explicitly use 'dotnet build -o windows_build -r win-x64' for windows.

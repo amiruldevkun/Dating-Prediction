@@ -1,6 +1,6 @@
 using System;
 
-namespace datingpredic_updated {
+namespace Dating_Prediction {
     public class gender_check {
         public void check() {
             Program.def def = new Program.def();
@@ -15,20 +15,20 @@ namespace datingpredic_updated {
             }
             
             switch (Program.def.gender) {
-                    case "boy":
-                    Program.def.finalGender = "boy";
+                    case "Boy":
+                    Program.def.finalGender = "Boy";
                     break;
 
                     case "man":
-                    Program.def.finalGender = "boy";
+                    Program.def.finalGender = "Boy";
                     break;
 
-                    case "girl":
-                    Program.def.finalGender = "girl";
+                    case "Girl":
+                    Program.def.finalGender = "Girl";
                     break;
 
                     case "woman":
-                    Program.def.finalGender = "girl";
+                    Program.def.finalGender = "Girl";
                     break;
 
                     // default:
@@ -43,25 +43,25 @@ namespace datingpredic_updated {
                     Console.WriteLine("Gender not recognized. Please reinput: ");
                     Program.def.gender = Console.ReadLine();
                         switch (Program.def.gender) {
-                        case "boy":
-                        Program.def.finalGender = "boy";
+                        case "Boy":
+                        Program.def.finalGender = "Boy";
                         break;
 
                         case "man":
-                        Program.def.finalGender = "boy";
+                        Program.def.finalGender = "Boy";
                         break;
 
-                        case "girl":
-                        Program.def.finalGender = "girl";
+                        case "Girl":
+                        Program.def.finalGender = "Girl";
                         break;
 
                         case "woman":
-                        Program.def.finalGender = "girl";
+                        Program.def.finalGender = "Girl";
                         break;
 
                         // default:
-                        // // Console.WriteLine("Unrecognizeable gender. Please Reinput: ");
-                        // // Program.def.gender = Console.ReadLine();
+                        // Console.WriteLine("Unrecognizeable gender. Please Reinput: ");
+                        // Program.def.gender = Console.ReadLine();
 
                         
                     }
