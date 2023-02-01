@@ -47,15 +47,15 @@ the personality feature, the age will be in development straight after im done w
 a list of users using and their crushes. They can also see the percentage (if i finish it...) with the crush that they inputted. That would be cool.
 
 
-## GOALS
+## GOALS (sorted by importance)
+
+- Add tests
+
+- Add percentages
 
 - Implement a GUI
 
 - Add a database for recently made predictions
-
-- Add percentages
-
-- Add tests
 
 ## HOW-TO
 Go to the [releases]("https://github.com/amiruldevkun/Dating-Prediction/releases") tab and grab the latest one (as you should on any other thing).
@@ -77,7 +77,6 @@ No need for installing any dependencies as for every single release, I will buil
 Ok, so you have decided to not do it the easy way and wanted to build it yourself. So, these are the prerequisites.
 
 - The [.NET sdk (Version 6)](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-- Visual Studio 2022 (or any IDEs really)
 - A text editor (Optional) 
 
 Download the sdk using your prefered way, by an installer or winget. Your choice of the text editor or IDEs is up to you.

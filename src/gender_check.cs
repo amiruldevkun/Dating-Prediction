@@ -3,65 +3,73 @@ using System;
 namespace Dating_Prediction {
     public class gender_check {
         public void check() {
-            Program.def def = new Program.def();
+            def def = new def();
             Console.Write("Enter your gender : ");
-            Program.def.gender = Console.ReadLine();
+            def.gender = Console.ReadLine();
             Console.WriteLine();
             
-            while (string.IsNullOrEmpty(Program.def.gender)) {
+            while (string.IsNullOrEmpty(def.gender)) {
                 Console.WriteLine();
                 Console.WriteLine("Gender cant be empty. Please re-enter your gender");
-                Program.def.gender = Console.ReadLine();
+                def.gender = Console.ReadLine();
             }
             
-            switch (Program.def.gender) {
+            switch (def.gender) {
                     case "Boy":
-                    Program.def.finalGender = "Boy";
+                    def.finalGender = "Boy";
                     break;
 
                     case "man":
-                    Program.def.finalGender = "Boy";
+                    def.finalGender = "Boy";
+                    break;
+
+                    case "boy":
+                    def.finalGender = "Boy";
                     break;
 
                     case "Girl":
-                    Program.def.finalGender = "Girl";
+                    def.finalGender = "Girl";
+                    break;
+
+                    case "girl":
+                    def.finalGender = "Girl";
                     break;
 
                     case "woman":
-                    Program.def.finalGender = "Girl";
+                    def.finalGender = "Girl";
                     break;
 
                     // default:
                     // Console.WriteLine("Unrecognizeable gender. Please Reinput: ");
-                    // Program.def.gender = Console.ReadLine();
+                    // def.gender = Console.ReadLine();
 
             }
-            if(!string.IsNullOrEmpty(Program.def.gender)){
+            if(!string.IsNullOrEmpty(def.gender)){
 
-                while (string.IsNullOrEmpty(Program.def.finalGender)) {
+                while (string.IsNullOrEmpty(def.finalGender)) {
                     Console.WriteLine();
                     Console.WriteLine("Gender not recognized. Please reinput: ");
-                    Program.def.gender = Console.ReadLine();
-                        switch (Program.def.gender) {
+                    def.gender = Console.ReadLine();
+                        switch (def.gender) {
                         case "Boy":
-                        Program.def.finalGender = "Boy";
+                        def.finalGender = "Boy";
                         break;
 
                         case "man":
-                        Program.def.finalGender = "Boy";
+                        def.finalGender = "Boy";
                         break;
 
                         case "Girl":
-                        Program.def.finalGender = "Girl";
+                        def.finalGender = "Girl";
                         break;
 
                         case "woman":
-                        Program.def.finalGender = "Girl";
+                        def.finalGender = "Girl";
                         break;
 
                         // default:
                         // Console.WriteLine("Unrecognizeable gender. Please Reinput: ");
-                        // Program.def.gender = Console.ReadLine();
+                        // def.gender = Console.ReadLine();
 
                         
                     }

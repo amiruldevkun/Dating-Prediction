@@ -1,37 +1,34 @@
-using System;
 using System.Diagnostics;
-using System.IO;
 using System.Runtime.InteropServices;
-using Python.Runtime;
-
 
 /*
 TODO: Finish this program once and for all 
-!: ^^^^^^^^^^^^^^^^^^ this will surely never happen
+!: Lets try to do this ^
 TODO: release final
-!: ^^^^^^^^^ THIS TOo
+!: lets try ^
 */
 
 namespace Dating_Prediction
 {
+    public class def {
+        public static string? gender;
+        public static string? finalGender;
+        public static Person Boy = new Person();
+        public static Person Girl = new Person();
+    }
     public class Program
     {
 
-        public class def {
-            public static string gender;
-            public static string finalGender;
-            public static Person Boy = new Person();
-            public static Person Girl = new Person();
-        }
         static void Main(string[] args)
         {
+            StartScript();
+        }
+
+        private static void StartScript() 
+        {
             //* New sub-classes
-            var gCheck = new gender_check();
-            user user = new user();
-            crush crush = new crush();
-            var perc = new personalities();
-            def d = new def();
-            predictions p = new predictions();
+            gender_check gCheck = new gender_check();
+            personalities perc = new personalities();
             string url = "https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits";
 
             //* Actual program starts here
@@ -82,7 +79,6 @@ by AmirulDevKun
                 }
             }
 
-
             Console.Write("Do you want to refer the personality resources used? : ");
             string input = Console.ReadLine();
             switch (input)
@@ -110,20 +106,31 @@ by AmirulDevKun
             }
             Console.Clear();
 
-            //* Drawing the ascii art
+            //? Drawing the ascii art
+            
             Console.WriteLine(asciiArt);
-            python py = new python();
-            py.callPythonStuff();
-            //gCheck.check();
-            //user.check();
-            //crush.check();
-            //p.ageCall();
-            //perc.lazyPrint();
-            Console.WriteLine("The script has ended. Press any key to end the session.");
-            Console.ReadKey();
-            //EndScriptAnim();
+            
+            //? Calls the gender check method to determine the primary gender for input
+            
+            gCheck.check();
+            
+            //? Starts the process of getting the information
+            
+            user.check();
+            crush.check();
+            
+            //? Prints out values from the respective variables
 
+            Console.WriteLine(def.Boy.name + " " + def.Boy.str_personality + " " + def.Boy.personality + " " + def.Boy.age);
+            Console.WriteLine(def.Girl.name + " " + def.Girl.str_personality + " " + def.Girl.personality + " " + def.Girl.age);
+            
+            //? Prints out the selection of personalities
+            // perc.lazyPrint();
+            
+            //? Displays an animation for the ending
+            //EndScriptAnim();
         }
+
         private static void ScriptAnim() {
             Console.WriteLine("Loading the script...");
             using (var progress = new ProgressBar()) {
@@ -165,244 +172,6 @@ by AmirulDevKun
             str_personality = "";
         }
     }
-
-    class user { //! ADDING NEW FUNCTIONS
-
-        public void check() {
-            // Person Program.def.Boy = new Person();
-            // Person Program.def.Girl = new Person();
-            personalities perc = new personalities();
-            Program.def d = new Program.def();
-            if (Program.def.finalGender == "Boy") {
-                //* This part is pretty complicated... OH WHO AM I KIDDING!
-
-                Console.Write("Enter your name in : ");
-                Program.def.Boy.name = Console.ReadLine();
-                Console.WriteLine();
-                while (string.IsNullOrEmpty(Program.def.Boy.name)) { //? This checks if the input is empty. If it is empty,
-                    Console.WriteLine();
-                    Console.WriteLine("Name cant be empty. Please re-enter your name");//? Then it spits out an error
-                    Program.def.Boy.name = Console.ReadLine();//? Reprompt the input
-                }
-
-                Console.Write("Enter your age : ");
-                var ageAsString = Console.ReadLine();
-                Console.WriteLine();
-                while (!int.TryParse(ageAsString, out Program.def.Boy.age)) {
-                    Console.WriteLine();
-                    Console.WriteLine("Please re-enter your age.");
-                    ageAsString = Console.ReadLine();
-                }
-
-                perc.lazyPrint();
-                Console.Write("Enter your personality here : ");
-                var personaAsStr = Console.ReadLine();
-                Console.WriteLine();
-                while (!int.TryParse(personaAsStr, out Program.def.Boy.personality)) {
-                    Console.WriteLine();
-                    Console.WriteLine("Personality cant be empty. Please re-enter your personality.");
-                    personaAsStr = Console.ReadLine();
-                }
-                switch (Program.def.Boy.personality) {
-                    case 1:
-                        Program.def.Boy.str_personality = "Openness";
-                        break;
-                    case 2:
-                        Program.def.Boy.str_personality = "Conscientiousness";
-                        break;
-                    case 3:
-                        Program.def.Boy.str_personality = "Extraversion";
-                        break;
-                    case 4:
-                        Program.def.Boy.str_personality = "Agreeableness";
-                        break;
-                    case 5:
-                        Program.def.Boy.str_personality = "Neuroticism";
-                        break;
-                    default:
-                        Console.WriteLine("Invalid personality. Please reinput it after this line");
-                        Program.def.Boy.personality = Int32.Parse(Console.ReadLine());
-                        break;
-                }
-                Console.WriteLine(Program.def.Boy.name + " " + Program.def.Boy.age + " " + Program.def.Boy.str_personality);
-            }
-            else
-            {
-                Console.Write("Enter your name in : ");
-                Program.def.Girl.name = Console.ReadLine();
-                Console.WriteLine();
-                while (string.IsNullOrEmpty(Program.def.Girl.name))
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Name cant be empty. Please re-enter your name");
-                    Program.def.Girl.name = Console.ReadLine();
-                }
-
-                Console.Write("Enter your age : ");
-                var ageAsString = Console.ReadLine();
-                Console.WriteLine();
-                while (!int.TryParse(ageAsString, out Program.def.Girl.age)) {
-                    Console.WriteLine();
-                    Console.WriteLine("Please re-enter your age: ");
-                    ageAsString = Console.ReadLine();
-                }
-                perc.lazyPrint(); 
-                Console.Write("Enter your personality here : ");
-                Program.def.Girl.personality = Int32.Parse(Console.ReadLine());
-                Console.WriteLine();
-                while (string.IsNullOrEmpty(Program.def.Girl.personality.ToString())) {
-                    Console.WriteLine();
-                    Console.WriteLine("Personality cant be empty. Please re-enter your personality.");
-                    Program.def.Girl.personality = Int32.Parse(Console.ReadLine());
-                }
-
-                switch (Program.def.Girl.personality)
-                {
-                    case 1:
-                        Program.def.Girl.str_personality = "Openness";
-                        break;
-                    case 2:
-                        Program.def.Girl.str_personality = "Conscientiousness";
-                        break;
-                    case 3:
-                        Program.def.Girl.str_personality = "Extraversion";
-                        break;
-                    case 4:
-                        Program.def.Girl.str_personality = "Agreeableness";
-                        break;
-                    case 5:
-                        Program.def.Girl.str_personality = "Neuroticism";
-                        break;
-                    default:
-                        Console.WriteLine("Invalid personality. Please reinput it after this line");
-                        Program.def.Girl.personality = Int32.Parse(Console.ReadLine());
-                        break;
-                }
-
-                Console.WriteLine(Program.def.Girl.name + " " + Program.def.Girl.age + " " + Program.def.Girl.str_personality);
-            }
-        }
-    }
-
-    class crush {
-        public void check() {
-            // Person Boy = new Person();
-            // Person Program.def.Girl = new Person();
-            personalities perc = new personalities();
-            Program.def d = new Program.def();
-
-            if (Program.def.finalGender == "Boy") {
-
-                Console.Write("Enter your crush's name in : ");
-                Program.def.Girl.name = Console.ReadLine();
-                Console.WriteLine();
-                while (string.IsNullOrEmpty(Program.def.Girl.name)) {
-                    Console.WriteLine();
-                    Console.WriteLine("Name cant be empty. Please re-enter your crush's name");
-                    Program.def.Girl.name = Console.ReadLine();
-                }
-
-                Console.Write("Enter your crush's age : ");
-                var ageAsString = Console.ReadLine();
-                Console.WriteLine();
-                while (!int.TryParse(ageAsString, out Program.def.Girl.age)) {
-                    Console.WriteLine();
-                    Console.WriteLine("Please re-enter your crush's age.");
-                    ageAsString = Console.ReadLine();
-                }
-                perc.lazyPrint();
-                Console.Write("Enter your crush's personality here : ");
-                Program.def.Girl.personality = Int32.Parse(Console.ReadLine());
-                Console.WriteLine();
-                while (string.IsNullOrEmpty(Program.def.Girl.personality.ToString())) {
-                    Console.WriteLine();
-                    Console.WriteLine("Personality cant be empty. Please re-enter your crush's personality.");
-                    Program.def.Girl.personality = Int32.Parse(Console.ReadLine());
-                }
-
-                switch (Program.def.Girl.personality)
-                {
-                    case 1:
-                        Program.def.Girl.str_personality = "Openness";
-                        break;
-                    case 2:
-                        Program.def.Girl.str_personality = "Conscientiousness";
-                        break;
-                    case 3:
-                        Program.def.Girl.str_personality = "Extraversion";
-                        break;
-                    case 4:
-                        Program.def.Girl.str_personality = "Agreeableness";
-                        break;
-                    case 5:
-                        Program.def.Girl.str_personality = "Neuroticism";
-                        break;
-                    default:
-                        Console.WriteLine("Invalid personality. Please reinput it after this line");
-                        Program.def.Girl.personality = Int32.Parse(Console.ReadLine());
-                        break;
-                }
-
-                Console.WriteLine(Program.def.Girl.name + " " + Program.def.Girl.age + " " + Program.def.Girl.str_personality);
-
-            }
-            else
-            {
-                Console.Write("Enter your crush's name in : ");
-                Program.def.Boy.name = Console.ReadLine();
-                Console.WriteLine();
-                while (string.IsNullOrEmpty(Program.def.Boy.name)) {
-                    Console.WriteLine();
-                    Console.WriteLine("Name cant be empty. Please re-enter your crush's name");
-                    Program.def.Boy.name = Console.ReadLine();
-                }
-
-                Console.Write("Enter your crush's age : ");
-                var ageAsString = Console.ReadLine();
-                Console.WriteLine();
-                while (!int.TryParse(ageAsString, out Program.def.Boy.age)) {
-                    Console.WriteLine();
-                    Console.WriteLine("Please re-enter your crush's age.");
-                    ageAsString = Console.ReadLine();
-                }
-                perc.lazyPrint();
-                Console.Write("Enter your crush's personality here : ");
-                Program.def.Boy.personality = Int32.Parse(Console.ReadLine());
-                Console.WriteLine();
-                while (string.IsNullOrEmpty(Program.def.Boy.personality.ToString())) {
-                    Console.WriteLine();
-                    Console.WriteLine("Personality cant be empty. Please re-enter your crush's personality.");
-                    Program.def.Boy.personality = Int32.Parse(Console.ReadLine());
-                }
-
-                switch (Program.def.Boy.personality)
-                {
-                    case 1:
-                        Program.def.Boy.str_personality = "Openness";
-                        break;
-                    case 2:
-                        Program.def.Boy.str_personality = "Conscientiousness";
-                        break;
-                    case 3:
-                        Program.def.Boy.str_personality = "Extraversion";
-                        break;
-                    case 4:
-                        Program.def.Boy.str_personality = "Agreeableness";
-                        break;
-                    case 5:
-                        Program.def.Boy.str_personality = "Neuroticism";
-                        break;
-                    default:
-                        Console.WriteLine("Invalid personality. Please reinput it after this line");
-                        Program.def.Boy.personality = Int32.Parse(Console.ReadLine());
-                        break;
-                }
-
-                Console.WriteLine(Program.def.Boy.name + " " + Program.def.Boy.age + " " + Program.def.Boy.str_personality);
-
-            }
-        }
-    }
     class personalities
     {
         private static string pers1;
@@ -441,23 +210,4 @@ by AmirulDevKun
             Console.WriteLine();
         } 
     }
-    class python
-    {
-        public void callPythonStuff()
-        {
-            Runtime.PythonDLL = @"C:\Users\amiru\AppData\Local\Programs\Python\Python311\python311.dll";
-            string pathToVirtualEnv = @"C:\Users\amiru\Desktop\Dating-Prediction\venv";
-    
-            // Environment.SetEnvironmentVariable("PATH", pathToVirtualEnv, EnvironmentVariableTarget.Process);
-            // Environment.SetEnvironmentVariable("PYTHONHOME", pathToVirtualEnv, EnvironmentVariableTarget.Process);
-            // Environment.SetEnvironmentVariable("PYTHONPATH", $"{pathToVirtualEnv}\\Lib\\site-packages;{pathToVirtualEnv}\\Lib", EnvironmentVariableTarget.Process);
-    
-    
-            PythonEngine.PythonHome = pathToVirtualEnv;
-            PythonEngine.PythonPath = PythonEngine.PythonPath + ";" + Environment.GetEnvironmentVariable("PYTHONPATH", EnvironmentVariableTarget.Process);
-    
-            PythonEngine.Initialize();
-            PythonEngine.Exec(@"C:\Users\amiru\Desktop\Dating-Prediction\python_scripts\test.py");
-        }
-    } 
 }
