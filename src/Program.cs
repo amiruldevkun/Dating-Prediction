@@ -124,10 +124,16 @@ by AmirulDevKun
             Console.WriteLine(def.Boy.name + " " + def.Boy.str_personality + " " + def.Boy.personality + " " + def.Boy.age);
             Console.WriteLine(def.Girl.name + " " + def.Girl.str_personality + " " + def.Girl.personality + " " + def.Girl.age);
             
+            //? Prints out the conclusion
+
+            conclusion.agePredicts();
+
             //? Prints out the selection of personalities
+            
             // perc.lazyPrint();
             
             //? Displays an animation for the ending
+            
             //EndScriptAnim();
         }
 

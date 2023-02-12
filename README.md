@@ -32,7 +32,7 @@ Lastly, it will try to match you together, by taking personality and age into co
 ## Why use C# when you already have a python repo with the same goal?
 
 The reason why I use C# instead of python is because python doesn't have the features that I needed for this project specifically and because I wanted to learn
-new languages too. C# also have a lot in common with java like how the syntax works and how the code kinda written. 
+new languages too. C# also have a lot in common with java like how the syntax works and how the code gets written. 
 
 ## The obstacles when making this project
 
