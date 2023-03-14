@@ -31,7 +31,7 @@ namespace Dating_Prediction
             personalities perc = new personalities();
             string url = "https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits";
 
-            //* Actual program starts here
+            //* Actual program starts here 
             Console.Title = "Dating Predictions by AmirulDevKun";
             String asciiArt = @"
                                 

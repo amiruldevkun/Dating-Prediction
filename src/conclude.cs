@@ -15,7 +15,7 @@ namespace Dating_Prediction
             //* Good Predictions
 
             //* 13 - 16 range
-            if (Enumerable.Range(13, 4).Contains(def.Boy.age) && Enumerable.Range(13, 4).Contains(def.Girl.age)) 
+            if (Enumerable.Range(13, 3).Contains(def.Boy.age) && Enumerable.Range(13, 3).Contains(def.Girl.age)) 
             {
                 callExistingVars.determine = true;
             }
@@ -56,6 +56,9 @@ namespace Dating_Prediction
             //* Predictions on this func will be evaluated by probability of two people ending up together
             //* This func will also be called IF the agepredicts func return true!
 
+            int oops = 0;
+            advice.randomlyPickoutAnAdvice(oops);
+
             if (def.finalGender == "Boy") 
             {
                 switch(def.Boy.personality) 
@@ -63,7 +66,7 @@ namespace Dating_Prediction
                     case 1:
                     if (def.Girl.personality == 1 || def.Girl.personality == 3 || def.Girl.personality == 4) 
                     {
-                        Console.WriteLine("You two might be compatible! If you want some advice, " + Console.WriteLine(advice.randomlyPickoutAnAdvice()));
+                        Console.WriteLine("You two might be compatible! If you want some advice: " + oops);
                     } 
                     break;
                 }
@@ -78,11 +81,11 @@ namespace Dating_Prediction
                 adviceLol = new string[10] {"nah bro idk", "", "", "", "", "", "", "", "", ""};
             }
 
-            public static void randomlyPickoutAnAdvice() 
+            public static void randomlyPickoutAnAdvice(int output) 
             {
                 Random r = new Random();
-                int pickout = r.Next(0, adviceLol.Length);
-                Console.WriteLine(pickout);
+                output = r.Next(0, adviceLol.Length);
+                Console.WriteLine(output);
             }
         }
     }
