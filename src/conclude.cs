@@ -1,9 +1,9 @@
 using System;
 namespace Dating_Prediction 
 {
-    public class callExistingVars
-    {
-        public static bool determine = false;
+    public static class callExistingVars
+    { //!  ^^^^^^ I think its just this...
+        public static bool determine; //false
     }
     public static class conclusion 
     {
@@ -34,26 +34,27 @@ namespace Dating_Prediction
 
             //! Bad Predictions
 
-            //! Under 16 with 20+ DANGER ZONE
-            else if (Enumerable.Range(1, 16).Contains(def.Boy.age) && (def.Girl.age >= 20) || Enumerable.Range(1,17).Contains(def.Girl.age) && def.Boy.age >= 20) 
-            {
-                callExistingVars.determine = false;
-            }
+            // //! Under 15 with 20+ DANGER ZONE
+            // else if (Enumerable.Range(0, 16).Contains(def.Boy.age) && (def.Girl.age >= 20) || Enumerable.Range(0,16).Contains(def.Girl.age) && def.Boy.age >= 20) 
+            // {
+            //     callExistingVars.determine = false;
+            // }
             
-            //! Big age gap between a primary schooler and a middle/highschooler
-            else if (Enumerable.Range(1, 12).Contains(def.Boy.age) && Enumerable.Range(15,3).Contains(def.Girl.age)) 
-            {
-                callExistingVars.determine = false;
-            }
+            // //! Big age gap between a primary schooler and a middle/highschooler
+            // else if (Enumerable.Range(1, 12).Contains(def.Boy.age) && Enumerable.Range(15,3).Contains(def.Girl.age) || Enumerable.Range(1, 12).Contains(def.Girl.age) && Enumerable.Range(15,3).Contains(def.Boy.age)) 
+            // {
+            //     callExistingVars.determine = false;
+            // }
 
             //? This will print out the value from the 'determine' variable.
+            //! does this override the variable?
             Console.WriteLine(callExistingVars.determine);
         
         }
 
         public static void personalityPredicts() 
         {
-            //* Predictions on this func will be evaluated by probability of two people ending up together
+            //* Predictions on this function will be evaluated by probability of two people ending up together
             //* This func will also be called IF the agepredicts func return true!
 
             int oops = 0;

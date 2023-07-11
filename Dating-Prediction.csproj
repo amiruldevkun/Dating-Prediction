@@ -14,9 +14,4 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="pythonnet" Version="3.0.1" />
-  </ItemGroup>
-
 </Project>
