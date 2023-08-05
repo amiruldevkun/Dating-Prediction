@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 /*
 TODO: Finish this program once and for all 
@@ -16,15 +17,11 @@ namespace Dating_Prediction
         public static Person Boy = new Person();
         public static Person Girl = new Person();
     }
-    public class Program
+
+    public class Program : Form
     {
 
-        static void Main(string[] args)
-        {
-            StartScript();
-        }
-
-        private static void StartScript() 
+         public static void Main()
         {
             //* New sub-classes
             gender_check gCheck = new gender_check();
@@ -32,7 +29,7 @@ namespace Dating_Prediction
             string url = "https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits";
 
             //* Actual program starts here 
-            Console.Title = "Dating Predictions by AmirulDevKun";
+            
             String asciiArt = @"
                                 
 ██████╗░░█████╗░████████╗██╗███╗░░██╗░██████╗░
@@ -61,7 +58,7 @@ by AmirulDevKun
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) {
                     Console.WriteLine("I AM LINUX");
                     Process Proc = new System.Diagnostics.Process();
-                    Proc.StartInfo.FileName = "/usr/bin/placeholder";
+                    Proc.StartInfo.FileName = "/usr/bin/firefox";
                     Proc.StartInfo.Arguments = url;
                     Proc.Start();
                 }
@@ -70,7 +67,7 @@ by AmirulDevKun
                     Process.Start(new ProcessStartInfo("cmd", $"/c start {url}"));
                 }
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) {
-                    Console.WriteLine("I PAY EXCESSIVE AMOUNT OF MONEY FOR SHIT HARDWARE");
+                    Console.WriteLine("I PAY EXCESSIVE AMOUNT OF MONEY FOR AN ABUNDANCE OF PAYWALLS");
                     Process.Start("open", url);
                 }
                 else {

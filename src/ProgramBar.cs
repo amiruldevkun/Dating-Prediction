@@ -10,7 +10,7 @@ public class ProgressBar : IDisposable, IProgress<double> {
 	private readonly TimeSpan animationInterval = TimeSpan.FromSeconds(1.0 / 8);
 	private const string animation = @"|/-\";
 
-	private readonly Timer timer;
+	private readonly System.Threading.Timer timer;
 
 	private double currentProgress = 0;
 	private string currentText = string.Empty;
@@ -18,7 +18,7 @@ public class ProgressBar : IDisposable, IProgress<double> {
 	private int animationIndex = 0;
 
 	public ProgressBar() {
-		timer = new Timer(TimerHandler);
+		timer = new System.Threading.Timer(TimerHandler);
 
 		// A progress bar is only for temporary display in a console window.
 		// If the console output is redirected to a file, draw nothing.

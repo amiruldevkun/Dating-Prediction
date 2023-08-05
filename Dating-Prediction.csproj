@@ -1,17 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <RootNamespace>Dating_Prediction</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>enable</ImplicitUsings> 
     <Nullable>enable</Nullable>
+	<UseWindowsForms>true</UseWindowsForms>
 
     <OutputType>Exe</OutputType>
     <IsPackable>true</IsPackable>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="System.Windows.Forms" />
+  </ItemGroup>
+	
+
 </Project>
