@@ -1,38 +1,37 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {}
+    "net9.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": []
+    "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\amiru\\.nuget\\packages\\": {}
+    "/home/m1rul/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amiru\\Source\\Repos\\Dating-Prediction\\Dating-Prediction.csproj",
+      "projectUniqueName": "/home/m1rul/Dating-Prediction/Dating-Prediction.csproj",
       "projectName": "Dating-Prediction",
-      "projectPath": "C:\\Users\\amiru\\Source\\Repos\\Dating-Prediction\\Dating-Prediction.csproj",
-      "packagesPath": "C:\\Users\\amiru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amiru\\Source\\Repos\\Dating-Prediction\\obj\\",
+      "projectPath": "/home/m1rul/Dating-Prediction/Dating-Prediction.csproj",
+      "packagesPath": "/home/m1rul/.nuget/packages/",
+      "outputPath": "/home/m1rul/Dating-Prediction/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\amiru\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/m1rul/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-windows"
+        "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -40,11 +39,17 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net7.0-windows7.0": {
-        "targetAlias": "net7.0-windows",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "imports": [
           "net461",
           "net462",
@@ -59,12 +64,9 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.112/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

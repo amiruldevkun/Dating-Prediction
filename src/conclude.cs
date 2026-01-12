@@ -15,19 +15,19 @@ namespace Dating_Prediction
             //* Good Predictions
 
             //* 13 - 16 range
-            if (Enumerable.Range(13, 3).Contains(def.Boy.age) && Enumerable.Range(13, 3).Contains(def.Girl.age)) 
+            if (Enumerable.Range(13, 3).Contains(def.Male.age) && Enumerable.Range(13, 3).Contains(def.Female.age)) 
             {
                 callExistingVars.determine = true;
             }
 
             //* 17 - 19 range
-            else if (Enumerable.Range(17, 2).Contains(def.Boy.age) && Enumerable.Range(17, 2).Contains(def.Girl.age)) 
+            else if (Enumerable.Range(17, 2).Contains(def.Male.age) && Enumerable.Range(17, 2).Contains(def.Female.age)) 
             {
                 callExistingVars.determine = true;
             }
             
             //* 20+ range
-            else if (def.Boy.age >= 20 && def.Girl.age >= 20) 
+            else if (def.Male.age >= 20 && def.Female.age >= 20) 
             {
                 callExistingVars.determine = true;
             }
@@ -35,13 +35,13 @@ namespace Dating_Prediction
             //! Bad Predictions
 
             // //! Under 15 with 20+ DANGER ZONE
-            // else if (Enumerable.Range(0, 16).Contains(def.Boy.age) && (def.Girl.age >= 20) || Enumerable.Range(0,16).Contains(def.Girl.age) && def.Boy.age >= 20) 
+            // else if (Enumerable.Range(0, 16).Contains(def.Male.age) && (def.Female.age >= 20) || Enumerable.Range(0,16).Contains(def.Female.age) && def.Male.age >= 20) 
             // {
             //     callExistingVars.determine = false;
             // }
             
             // //! Big age gap between a primary schooler and a middle/highschooler
-            // else if (Enumerable.Range(1, 12).Contains(def.Boy.age) && Enumerable.Range(15,3).Contains(def.Girl.age) || Enumerable.Range(1, 12).Contains(def.Girl.age) && Enumerable.Range(15,3).Contains(def.Boy.age)) 
+            // else if (Enumerable.Range(1, 12).Contains(def.Male.age) && Enumerable.Range(15,3).Contains(def.Female.age) || Enumerable.Range(1, 12).Contains(def.Female.age) && Enumerable.Range(15,3).Contains(def.Male.age)) 
             // {
             //     callExistingVars.determine = false;
             // }
@@ -62,10 +62,10 @@ namespace Dating_Prediction
 
             if (def.finalGender == "Boy") 
             {
-                switch(def.Boy.personality) 
+                switch(def.Male.personality) 
                 {
                     case 1:
-                    if (def.Girl.personality == 1 || def.Girl.personality == 3 || def.Girl.personality == 4) 
+                    if (def.Female.personality == 1 || def.Female.personality == 3 || def.Female.personality == 4) 
                     {
                         Console.WriteLine("You two might be compatible! If you want some advice: " + oops);
                     } 

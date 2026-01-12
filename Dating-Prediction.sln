@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dating-Prediction", "Dating-Prediction.csproj", "{D3F0753D-20C2-4D98-ABD0-A32EEE66D94C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiImplentation", "..\GuiImplentation\GuiImplentation.csproj", "{D41F6C61-7AD6-4C44-B52A-E362A840964E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

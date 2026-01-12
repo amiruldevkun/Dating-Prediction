@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>Dating_Prediction</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings> 
     <Nullable>enable</Nullable>
-	<UseWindowsForms>true</UseWindowsForms>
+	
 
     <OutputType>Exe</OutputType>
     <IsPackable>true</IsPackable>
@@ -17,9 +17,5 @@
     <Optimize>False</Optimize>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Using Include="System.Windows.Forms" />
-  </ItemGroup>
-	
-
+  
 </Project>

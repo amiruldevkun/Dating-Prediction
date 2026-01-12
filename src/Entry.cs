@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
+
 
 /*
 TODO: Finish this program once and for all 
@@ -14,17 +14,18 @@ namespace Dating_Prediction
     public class def {
         public static string? gender;
         public static string? finalGender;
-        public static Person Boy = new Person();
-        public static Person Girl = new Person();
+        public static Person Male = new Person(); //! THIS IS BAD!!!!!!!!!!!!!!! WE ARE CREATING A NEW OBJECT EACH TIME
+        public static Person Female = new Person();
     }
 
-    public class Program : Form
+    public class Entry
     {
 
          public static void Main()
         {
             //* New sub-classes
             gender_check gCheck = new gender_check();
+            inputHandler IH = new inputHandler();
             personalities perc = new personalities();
             string url = "https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits";
 
@@ -109,21 +110,20 @@ by AmirulDevKun
             
             //? Calls the gender check method to determine the primary gender for input
             
-            gCheck.check();
+            def.gender = gCheck.input();
             
             //? Starts the process of getting the information
-            
-            user.check();
-            crush.check();
+
+            IH.check(def.gender);
             
             //? Prints out values from the respective variables
 
-            Console.WriteLine(def.Boy.name + " " + def.Boy.str_personality + " " + def.Boy.personality + " " + def.Boy.age);
-            Console.WriteLine(def.Girl.name + " " + def.Girl.str_personality + " " + def.Girl.personality + " " + def.Girl.age);
+            // Console.WriteLine(def.Boy.name + " " + def.Boy.str_personality + " " + def.Boy.personality + " " + def.Boy.age);
+            // Console.WriteLine(def.Girl.name + " " + def.Girl.str_personality + " " + def.Girl.personality + " " + def.Girl.age);
             
             //? Prints out the conclusion
 
-            conclusion.agePredicts();
+            //conclusion.agePredicts();
 
             //? Prints out the selection of personalities
             
@@ -197,8 +197,7 @@ by AmirulDevKun
         //! Lazy implementation of array printing.
         public void lazyPrint()
         {
-            string[] PP = { pers1, pers2, pers3, pers4, pers5 };
-
+            
             //for (int i = 0; i < PP.Length; i++)
             //{
             //Console.WriteLine(PP[i]);
