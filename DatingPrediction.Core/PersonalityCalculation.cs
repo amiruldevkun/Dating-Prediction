@@ -3,7 +3,9 @@ using System;
 
 public class PersonalityCalculation
 {
+    private int usrInput;
     private readonly IInputHandler _inputHandler;
+    PersonObj _person =  new PersonObj();
     float getScore(int answer)
     {
         return (answer - 1) * 25;
@@ -14,44 +16,98 @@ public class PersonalityCalculation
         return (5 - answer) * 25;
     }
 
-    void getPersonalityScore(int answer)
+    private bool[] isDirect = new bool[] { true, false, true };
+
+    private string[] OpenQuestions = new String[]
     {
-        var questions = new (string TextReader, bool isDirect)[]
-        {
-            // Openness Questions
-            ("I have a vibrant imagination", true),
-            ("I have difficulty understanding abstract ideas", false),
-            ("I am curious about many different things", true),
-            
-            // Conscientiousness Questions
-            ("I am always prepared and organzied", true),
-            ("I often forget to put things back in their place", false),
-            ("I make sure that my work is finished on time", true),
-            
-            // Extraversion Questions
-            ("I am the life of the party", true),
-            ("I don't like to draw attention to myself", false),
-            ("I feel comfortable around people", true),
-            
-            // Agreeableness Questions
-            ("I am interested in people's feelings", true),
-            ("I am not really interested in others", false),
-            ("I have a good word for everyone", true),
-            
-            // Neuroticism Questions
-            ("I get stressed out easily", true),
-            ("I am relaxed most of the time", false),
-            ("I have frequent mood swings", true)
-            
-        };
+        "I have a vibrant imagination",
+        "I have difficulty understanding abstract ideas",
+        "I am curious about many different things"
+    };
 
-        float totalOpennessScore = 0;
-        
-        _inputHandler.displayQuestions("Answer the following questions", ": ");
+    private string[] ConsciQuestions = new string[]
+    {
+        "I am always prepared and organized",
+        "I often forget to put things back in their place",
+        "I make sure that my work is finished on time"
+    };
 
-        for (int i = 0; i < 3; i++)
+    private string[] ExtraverQuestions = new string[]
+    {
+        "I am the life of the party.",
+        "I don't like to draw attention to myself.",
+        "I feel comfortable around people."
+    };
+
+    private string[] AgreeableQuestions = new string[]
+    {
+        "I am interested in people's feelings.",
+        "I am not really interested in others.",
+        "I have a good word for everyone."
+    };
+
+    private string[] NeuroQuestions = new string[]
+    {
+        "I get stressed out easily.",
+        "I am relaxed most of the time",
+        "I have frequent mood swings"
+    };
+
+    void collectPersonalityScore(string gender)
+    {
+        if (gender == "MALE")
         {
-            _inputHandler.displayQuestions(questions[i].TextReader, " (1-5):");
+            // Collect personality scores for User
+            _person.User.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
+            _person.User.ConsciScore = getPersonalityScore("Openness", ConsciQuestions, isDirect);
+            _person.User.ExtraverScore = getPersonalityScore("Openness", ExtraverQuestions, isDirect);
+            _person.User.AgreeScore = getPersonalityScore("Openness", AgreeableQuestions, isDirect);
+            _person.User.NeuroScore = getPersonalityScore("Openness", NeuroQuestions, isDirect);
+            
+            // Collect personality scores for Crush
+            _person.Crush.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
+            _person.Crush.ConsciScore = getPersonalityScore("Openness", ConsciQuestions, isDirect);
+            _person.Crush.ExtraverScore = getPersonalityScore("Openness", ExtraverQuestions, isDirect);
+            _person.Crush.AgreeScore = getPersonalityScore("Openness", AgreeableQuestions, isDirect);
+            _person.Crush.NeuroScore = getPersonalityScore("Openness", NeuroQuestions, isDirect);
         }
+        else
+        {
+            // Collect personality scores for User
+            _person.User.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
+            _person.User.ConsciScore = getPersonalityScore("Openness", ConsciQuestions, isDirect);
+            _person.User.ExtraverScore = getPersonalityScore("Openness", ExtraverQuestions, isDirect);
+            _person.User.AgreeScore = getPersonalityScore("Openness", AgreeableQuestions, isDirect);
+            _person.User.NeuroScore = getPersonalityScore("Openness", NeuroQuestions, isDirect);
+            
+            // Collect personality scores for Crush
+            _person.Crush.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
+            _person.Crush.ConsciScore = getPersonalityScore("Openness", ConsciQuestions, isDirect);
+            _person.Crush.ExtraverScore = getPersonalityScore("Openness", ExtraverQuestions, isDirect);
+            _person.Crush.AgreeScore = getPersonalityScore("Openness", AgreeableQuestions, isDirect);
+            _person.Crush.NeuroScore = getPersonalityScore("Openness", NeuroQuestions, isDirect);
+        }
+    }
+    
+    double getPersonalityScore(string traitName, string[] traitQuestionArray, bool[] isDirect)
+    {
+        _inputHandler.displayString("Displaying Questions for " + traitName);
+        double totalScore = 0;
+
+        for (int i = 0; i < traitQuestionArray.Length; i++)
+        {
+            _inputHandler.displayQuestions(traitQuestionArray[i], " ( 1 - 5 ):");
+            int answer = _inputHandler.getNumericalInput();
+
+            if (isDirect[i])
+            {
+                totalScore += getScore(answer);
+            }
+            else
+            {
+                totalScore += getReverseScore(answer);
+            }
+        }
+        return totalScore / traitQuestionArray.Length;
     }
 }
