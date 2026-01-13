@@ -6,4 +6,5 @@ public interface IInputHandler
         int getNumericalInput();
         char getKeyboardPress();
         void displayQuestions(string input, string randoText);
+        string displayString(string input);
 }
