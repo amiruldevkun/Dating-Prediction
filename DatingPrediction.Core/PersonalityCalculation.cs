@@ -3,9 +3,15 @@ using System;
 
 public class PersonalityCalculation
 {
-    private int usrInput;
     private readonly IInputHandler _inputHandler;
-    PersonObj _person =  new PersonObj();
+    private PersonObj _person;
+
+    public PersonalityCalculation(IInputHandler inputHandler, PersonObj person)
+    {
+        _inputHandler = inputHandler;
+        _person = person;
+    }
+    
     float getScore(int answer)
     {
         return (answer - 1) * 25;
@@ -53,40 +59,21 @@ public class PersonalityCalculation
         "I have frequent mood swings"
     };
 
-    void collectPersonalityScore(string gender)
+    void collectPersonalityScore()
     {
-        if (gender == "MALE")
-        {
-            // Collect personality scores for User
-            _person.User.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
-            _person.User.ConsciScore = getPersonalityScore("Openness", ConsciQuestions, isDirect);
-            _person.User.ExtraverScore = getPersonalityScore("Openness", ExtraverQuestions, isDirect);
-            _person.User.AgreeScore = getPersonalityScore("Openness", AgreeableQuestions, isDirect);
-            _person.User.NeuroScore = getPersonalityScore("Openness", NeuroQuestions, isDirect);
+        // Collect personality scores for User
+        _person.User.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
+        _person.User.ConsciScore = getPersonalityScore("Conscientiousness", ConsciQuestions, isDirect);
+        _person.User.ExtraverScore = getPersonalityScore("Extraversion", ExtraverQuestions, isDirect);
+        _person.User.AgreeScore = getPersonalityScore("Agreeableness", AgreeableQuestions, isDirect);
+        _person.User.NeuroScore = getPersonalityScore("Neuroticism", NeuroQuestions, isDirect);
             
-            // Collect personality scores for Crush
-            _person.Crush.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
-            _person.Crush.ConsciScore = getPersonalityScore("Openness", ConsciQuestions, isDirect);
-            _person.Crush.ExtraverScore = getPersonalityScore("Openness", ExtraverQuestions, isDirect);
-            _person.Crush.AgreeScore = getPersonalityScore("Openness", AgreeableQuestions, isDirect);
-            _person.Crush.NeuroScore = getPersonalityScore("Openness", NeuroQuestions, isDirect);
-        }
-        else
-        {
-            // Collect personality scores for User
-            _person.User.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
-            _person.User.ConsciScore = getPersonalityScore("Openness", ConsciQuestions, isDirect);
-            _person.User.ExtraverScore = getPersonalityScore("Openness", ExtraverQuestions, isDirect);
-            _person.User.AgreeScore = getPersonalityScore("Openness", AgreeableQuestions, isDirect);
-            _person.User.NeuroScore = getPersonalityScore("Openness", NeuroQuestions, isDirect);
-            
-            // Collect personality scores for Crush
-            _person.Crush.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
-            _person.Crush.ConsciScore = getPersonalityScore("Openness", ConsciQuestions, isDirect);
-            _person.Crush.ExtraverScore = getPersonalityScore("Openness", ExtraverQuestions, isDirect);
-            _person.Crush.AgreeScore = getPersonalityScore("Openness", AgreeableQuestions, isDirect);
-            _person.Crush.NeuroScore = getPersonalityScore("Openness", NeuroQuestions, isDirect);
-        }
+        // Collect personality scores for Crush
+        _person.Crush.OpenScore = getPersonalityScore("Openness", OpenQuestions, isDirect);
+        _person.Crush.ConsciScore = getPersonalityScore("Conscientiousness", ConsciQuestions, isDirect);
+        _person.Crush.ExtraverScore = getPersonalityScore("Extraversion", ExtraverQuestions, isDirect);
+        _person.Crush.AgreeScore = getPersonalityScore("Agreeableness", AgreeableQuestions, isDirect);
+        _person.Crush.NeuroScore = getPersonalityScore("Neuroticism", NeuroQuestions, isDirect);
     }
     
     double getPersonalityScore(string traitName, string[] traitQuestionArray, bool[] isDirect)
