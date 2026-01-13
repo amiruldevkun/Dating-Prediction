@@ -14,14 +14,15 @@ namespace Dating_Prediction
 {
     public class Entry
     {
+        
+        
          public static void Main()
         {
-            //* New sub-classes
-            genderCheck gCheck = new genderCheck();
-            IInputHandler inputHandler;
-            infoGatherer _IG = new infoGatherer();
-            personalities perc = new personalities();
-            PersonObj per = new PersonObj();
+            //* Initializing objects
+            ConsoleIH _IH = new ConsoleIH();
+            PersonObj person = new PersonObj();
+            genderCheck gCheck = new genderCheck(_IH, person);
+            infoGatherer _IG = new infoGatherer(_IH);            
             string url = "https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits";
 
             //* Actual program starts here 
@@ -105,11 +106,11 @@ by AmirulDevKun
             
             //? Calls the gender check method to determine the primary gender for input
             
-            per.User.gender = gCheck.input();
+            gCheck.input();
             
             //? Starts the process of getting the information
 
-            _IG.check(per.User.gender);
+            _IG.getValues(person.User.gender);
             
             //? Prints out values from the respective variables
 
@@ -153,58 +154,5 @@ by AmirulDevKun
             // Console.Clear();
             // Console.WriteLine("Script loaded.");
         }
-    }
-
-    public class Person { //! FIXED CLASS
-        public string name;
-        public int age;
-        public int personality;
-        public string str_personality;
-        public string gender;
-
-        public Person() {
-            name = "";
-            age = 0;
-            personality = 0;
-            gender = "";
-            str_personality = "";
-        }
-    }
-    class personalities
-    {
-        private static string pers1;
-        private static string pers2;
-        private static string pers3;
-        private static string pers4;
-        private static string pers5;
-        //private bool cool_bool;
-        public readonly string[] PP = { pers1, pers2, pers3, pers4, pers5 };
-
-        public personalities()
-        {
-            pers1 = "Openness"; //? curious and open about new things
-            pers2 = "Conscientiousness"; //? organized and keen
-            pers3 = "Extraversion"; //? high energy and socialable
-            pers4 = "Agreeableness"; //? understanding and softie
-            pers5 = "Neuroticism"; //? react badly to high stress situation
-        }
-
-        //! Lazy implementation of array printing.
-        public void lazyPrint()
-        {
-            
-            //for (int i = 0; i < PP.Length; i++)
-            //{
-            //Console.WriteLine(PP[i]);
-            //}
-
-            Console.WriteLine("1." + PP[0]);
-            Console.WriteLine("2." + PP[1]);
-            Console.WriteLine("3." + PP[2]);
-            Console.WriteLine("4." + PP[3]);
-            Console.WriteLine("5." + PP[4]);
-
-            Console.WriteLine();
-        } 
     }
 }
