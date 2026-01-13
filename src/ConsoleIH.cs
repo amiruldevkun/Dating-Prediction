@@ -11,7 +11,7 @@ class ConsoleIH : IInputHandler
 
     public int getNumericalInput()
     {
-        return 0;
+       return Int32.Parse(getInput());
     }
 
     public char getKeyboardPress()
@@ -21,11 +21,11 @@ class ConsoleIH : IInputHandler
 
     public void displayQuestions(string array, string randoText)
     {
-        throw  new NotImplementedException();
+        Console.WriteLine(array,  randoText);
     }
 
-    public string displayString(string input)
+    public void displayString(string input)
     {
-        throw new NotImplementedException();
+        Console.WriteLine(input);
     }
 }
