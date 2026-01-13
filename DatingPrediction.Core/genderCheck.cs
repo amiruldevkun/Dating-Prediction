@@ -5,45 +5,48 @@ public class genderCheck
     string gender;
     private string UpperGender;
     private readonly IInputHandler _inputHandler;
+    private PersonObj _person;
     
     public enum Gender {Male, Female}
 
-    public string input()
+    public genderCheck(IInputHandler inputHandler, PersonObj person)
     {
-        Console.WriteLine("Male | Female");
-        Console. Write("Enter your gender: ");
+        _inputHandler = inputHandler;
+        _person = person;
+    }
+
+    public void input()
+    {
+        _inputHandler.displayString("Male | Female");
+        _inputHandler.displayString("Enter your gender: ");
         UpperGender = _inputHandler.getInput().ToUpper();
-        Console.WriteLine();
+        _inputHandler.displayString("");
         
         while (string.IsNullOrEmpty(UpperGender)) {
-            Console.WriteLine("Male | Female");
-            Console.WriteLine("Gender cant be empty. Please re-enter your gender");
-            UpperGender = Console.ReadLine();
+            _inputHandler.displayString("Male | Female");
+            _inputHandler.displayString("Gender cant be empty. Please re-enter your gender");
+            UpperGender = _inputHandler.getInput();
             UpperGender = UpperGender.ToUpper();
         }
 
         check();
-        
-        return gender;
     }
     
-    string check()
+    void check()
     {
             
         if (UpperGender == "MALE")
         {
-            gender = "Male";
+            _person.User.gender = "Male";
+            _person.Crush.gender = "Female";
         } else if (UpperGender == "FEMALE")
         {
-            gender = "Female";
+            _person.User.gender = "Female";
+            _person.Crush.gender = "Male";
         }
         else
         {
-            Console.WriteLine("Invalid please reinput gender:");
+            _inputHandler.displayString("Invalid please reinput gender:");
         }
-
-        return gender;
-
     }
-    
 }
