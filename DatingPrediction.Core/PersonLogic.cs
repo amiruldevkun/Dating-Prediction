@@ -4,17 +4,22 @@ public class PersonLogic
 {
     public string name;
     public int age;
-    public int personality;
-    public string str_personality;
     public string gender;
+    public double OpenScore;
+    public double ConsciScore;
+    public double ExtraverScore;
+    public double AgreeScore;
+    public double NeuroScore;
 
     public PersonLogic() {
         name = "";
         age = 0;
-        personality = 0;
         gender = "";
-        str_personality = "";
-        
+        OpenScore = 0;
+        ConsciScore = 0;
+        ExtraverScore = 0;
+        AgreeScore = 0;
+        NeuroScore = 0;
     }
 }
 
