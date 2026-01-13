@@ -1,79 +1,26 @@
 namespace Dating_Prediction;
 
-class inputHandler : IInputHandler
-{
-    string crushGender;
-    private string maleName;
-    private string femaleName;
-    private string maleAge;
-    private string femaleAge;
+using DatingPrediction.Core;
 
+class ConsoleIH : IInputHandler
+{
     public string getInput()
     {
         return Console.ReadLine();
     }
 
-    public void check(string gender)
+    public int getNumericalInput()
     {
-        if (gender == "Male")
-        {
-            crushGender = "Female";
-            KeepName("Male");
-            
-        }
-        else if (gender == "Female")
-        {
-            crushGender = "Male";
-            KeepName("Female");
-            
-        }
-        
-
+        return 0;
     }
-    
-    
-    void KeepName(string gender)
+
+    public char getKeyboardPress()
     {
-        if (gender == "Male")
-        {
-            Console.WriteLine("Please input your name!");
-            maleName = getInput();
-            while (String.IsNullOrEmpty(maleName))
-            {
-                Console.WriteLine("Please reinput your name!"); 
-                maleName = getInput();
-            }
-            
-            Console.WriteLine("Please input your crush's name!");
-            femaleName = getInput();
-            while (String.IsNullOrEmpty(femaleName))
-            {
-                Console.WriteLine("Please reinput your name!");
-                femaleName = getInput();
-            }
-        }
-        else if (gender == "Female")
-        {
-            Console.WriteLine("Please input your name!");
-            femaleName = getInput();
-            while (String.IsNullOrEmpty(femaleName))
-            {
-                Console.WriteLine("Please reinput your name!");
-                femaleName = getInput();
-            }
-            
-            Console.WriteLine("Please input your crush's name!");
-            maleName = getInput();
-            while (String.IsNullOrEmpty(maleName))
-            {
-                Console.WriteLine("Please reinput your name!");
-                maleName = getInput();
-            }
-        }
+        return Console.ReadKey().KeyChar;
     }
-}
 
-public interface IInputHandler
-{
-    string getInput();
+    public void displayQuestions(string array, string randoText)
+    {
+        Console.WriteLine(array, "");
+    }
 }

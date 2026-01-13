@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using DatingPrediction.Core;
 
 
 /*
@@ -11,22 +12,16 @@ TODO: release final
 
 namespace Dating_Prediction
 {
-    public class def {
-        public static string? gender;
-        public static string? finalGender;
-        public static Person Male = new Person(); //! THIS IS BAD!!!!!!!!!!!!!!! WE ARE CREATING A NEW OBJECT EACH TIME
-        public static Person Female = new Person();
-    }
-
     public class Entry
     {
-
          public static void Main()
         {
             //* New sub-classes
-            gender_check gCheck = new gender_check();
-            inputHandler IH = new inputHandler();
+            genderCheck gCheck = new genderCheck();
+            IInputHandler inputHandler;
+            infoGatherer _IG = new infoGatherer();
             personalities perc = new personalities();
+            PersonObj per = new PersonObj();
             string url = "https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits";
 
             //* Actual program starts here 
@@ -110,11 +105,11 @@ by AmirulDevKun
             
             //? Calls the gender check method to determine the primary gender for input
             
-            def.gender = gCheck.input();
+            per.User.gender = gCheck.input();
             
             //? Starts the process of getting the information
 
-            IH.check(def.gender);
+            _IG.check(per.User.gender);
             
             //? Prints out values from the respective variables
 
