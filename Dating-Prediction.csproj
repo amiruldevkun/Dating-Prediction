@@ -5,17 +5,14 @@
     <RootNamespace>Dating_Prediction</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings> 
     <Nullable>enable</Nullable>
-	
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 
     <OutputType>Exe</OutputType>
     <IsPackable>true</IsPackable>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
   </PropertyGroup>
-
-  
 </Project>
