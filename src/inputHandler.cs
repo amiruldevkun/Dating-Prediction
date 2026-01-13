@@ -21,6 +21,11 @@ class ConsoleIH : IInputHandler
 
     public void displayQuestions(string array, string randoText)
     {
-        Console.WriteLine(array, "");
+        throw  new NotImplementedException();
+    }
+
+    public string displayString(string input)
+    {
+        throw new NotImplementedException();
     }
 }
