@@ -5,24 +5,29 @@ public class infoGatherer
     string crushGender;
     private string maleName;
     private string femaleName;
-    private string maleAge;
-    private string femaleAge;
+    private int maleAge;
+    private int femaleAge;
     private readonly IInputHandler _handler;
+
+    public infoGatherer(IInputHandler inputHandler)
+    {
+        _handler = inputHandler;
+    }
     
 
-    public void check(string gender)
+    public void getValues(string gender)
     {
         if (gender == "Male")
         {
             crushGender = "Female";
-            getName("Male", _handler);
-
+            getName(gender, _handler);
+            getAge(gender, _handler);
         }
         else if (gender == "Female")
         {
             crushGender = "Male";
-            getName("Female", _handler);
-
+            getName(gender, _handler);
+            getAge(gender, _handler);
         }
     }
 
@@ -66,9 +71,44 @@ public class infoGatherer
         }
     }
 
-    void getAge(IInputHandler ih)
+    void getAge(string gender, IInputHandler ih)
     {
-        
+        if (gender == "MALE")
+        {
+            ih.displayString("Please input your age!");
+            maleAge = ih.getNumericalInput();
+            while (maleAge < 1)
+            {
+                ih.displayString("Please reinput your age!");
+                maleAge = ih.getNumericalInput();
+            }
+            
+            ih.displayString("Please input your crush's age!");
+            femaleAge = ih.getNumericalInput();
+            while (femaleAge < 1)
+            {
+                ih.displayString("Please reinput your age!");
+                femaleAge = ih.getNumericalInput();
+            }
+        }
+        else
+        {
+            ih.displayString("Please input your age!");
+            femaleAge = ih.getNumericalInput();
+            while (femaleAge < 1)
+            {
+                ih.displayString("Please reinput your age!");
+                femaleAge = ih.getNumericalInput();
+            }
+            
+            ih.displayString("Please input your crush's age!");
+            maleAge = ih.getNumericalInput();
+            while (maleAge < 1)
+            {
+                ih.displayString("Please reinput your age!");
+                maleAge = ih.getNumericalInput();
+            }
+        }
         
     }
 }
