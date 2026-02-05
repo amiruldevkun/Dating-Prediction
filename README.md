@@ -1,20 +1,17 @@
 # DATING PREDICTIONS
-A dating prediction cli script to see if you have a chance with the person that catches your eye.
+A dating prediction cli script (GUI SOON!) to see if you have a chance with the person that catches your eye.
 
 ## Why did i make this?
 
 Because i was bored and wanted to do something in my free time. Its not useful in anykind, 
-but feel free to try it out i guess. It is not accurate by any chance, so if you value your 
-integrity and don't want to embarrass your self, please step away. 
-But, if you like being embarrased or just playing around, then go straight to the [how-to section](https://github.com/amiruldevkun/Dating-Prediction#how-to) section. 
-You could also contribute to this mess, if you want to that is.
+but feel free to try it out i guess. It is not perfectly accurate by any chance, but its fine to play around with 
+To run it yourself, please head to the [how-to section](https://github.com/amiruldevkun/Dating-Prediction#how-to)
 
 ## TABLE OF CONTENTS
 - [IMPORTANT](https://github.com/amiruldevkun/Dating-Prediction#important)
 - [GOALS](https://github.com/amiruldevkun/Dating-Prediction#goals)
 - [HOW-TO](https://github.com/amiruldevkun/Dating-Prediction#how-to)
 - [BUILDING](https://github.com/amiruldevkun/Dating-Prediction#building)
-- [CONTRIBUTING](https://github.com/amiruldevkun/Dating-Prediction#contributing)
 - [HELP INQUIRIES](https://github.com/amiruldevkun/Dating-Prediction#help-inquires)
 - [RESOURCES && EXTRA CREDITS](https://github.com/amiruldevkun/Dating-Prediction#resources--extra-credits)
 
@@ -41,19 +38,15 @@ problem lies with the code is not giving me the place where the error originated
 and making it hard to identify the mistake.
 
 # IMPORTANT
-
-This program is currently __UNDER DEVELOPMENT__ so expect unfinished-ness and bugs. The feature that is in development is 
-the personality feature, the age will be in development straight after im done with the personality feature. Currently messing around with sqlite3 and making a database for
-a list of users using and their crushes. They can also see the percentage (if i finish it...) with the crush that they inputted. That would be cool.
-
+This program is ***UNDER DEVELOPMENT*** so there will be bugs. This is not to be used seriously also and is not a relationship gauge to see if your partner is your soulmate.
 
 ## GOALS (sorted by importance)
 
-- Add tests
+- Add tests (on the way)
 
-- Add percentages
+- Add percentages (Done)
 
-- Implement a GUI
+- Implement a GUI (On the way)
 
 - Add a database for recently made predictions
 
@@ -76,35 +69,18 @@ No need for installing any dependencies as for every single release, I will buil
 ## BUILDING
 Ok, so you have decided to not do it the easy way and wanted to build it yourself. So, these are the prerequisites.
 
-- The [.NET sdk (Version 6)](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-- A text editor (Optional) 
+- The [.NET sdk (Version 9)](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+- An IDE (Rider, Visual Studio)
 
-Download the sdk using your prefered way, by an installer or winget. Your choice of the text editor or IDEs is up to you.
+Download the sdk using your prefered way, be it via installer or winget. Your choice of the text editor or IDEs is up to you.
 
-You can choose Rider, Visual Studio Code, Visual Studio 2022, Notepad++ or anything. The only important thing is that you have a terminal that can execute and build
+You can choose Rider, Visual Studio Code, Visual Studio 2022, Notepad++ or anything.
 
-the project using 
+After you have buckled up with the prerequisites that i have stated, you can either clone this repository or use the green code button.
 
-```
-dotnet build
-```
-
-**OR**
-
-```
-dotnet run
-```
-
-After you have buckled up with the prerequisites that i have stated, click on the green button that says `Code`, 
-
-click download zip, unzip the file, open a command prompt in the folder and type `dotnet clean` and then `dotnet build`. 
+Click download zip, unzip the file, open a command prompt in the folder and type `dotnet clean` and then `dotnet build`. 
 
 And after you are done! Enjoy this project!
-
-## CONTRIBUTING
-If you want to contribute to this mess, make a pull request(s) anytime but I might see it late as I dont have too much free time going through code changes when i have school. 
-
-Fork this repo if you want, but please credit my project.
 
 ## HELP INQUIRES 
 If you need help you can tag me on [twitter](https://twitter.com/amirulplays) or dm me, since i dont have anyone with perms to keep the repo going, i might not respond fast so keep that in mind.
@@ -112,6 +88,6 @@ If you need help you can tag me on [twitter](https://twitter.com/amirulplays) or
 
 ### RESOURCES && EXTRA CREDITS
 https://github.com/amiruldevkun/datingpredictions <br />
-https://dotnet.microsoft.com/en-us/download/dotnet/6.0 <br />
+https://dotnet.microsoft.com/en-us/download/dotnet/9.0 <br />
 https://twitter.com/amirulplays <br />
 [ProgramBar Source Code (Thank you Daniel!)](https://gist.github.com/DanielSWolf/0ab6a96899cc5377bf54)
