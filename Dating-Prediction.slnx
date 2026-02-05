@@ -6,4 +6,5 @@
   </Configurations>
   <Project Path="Dating-Prediction.csproj" />
   <Project Path="DatingPrediction.Core/DatingPrediction.Core.csproj" />
+  <Project Path="DatingPredictions.Tests\DatingPredictions.Tests.csproj" />
 </Solution>
