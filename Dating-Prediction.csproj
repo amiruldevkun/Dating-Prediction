@@ -15,4 +15,18 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="DatingPrediction.Core\DatingPrediction.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DatingPredictions.Tests\UnitTest1.cs">
+      <Link>TestUnits\UnitTest1.cs</Link>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.20.72" />
+  </ItemGroup>
 </Project>
