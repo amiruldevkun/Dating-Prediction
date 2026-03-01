@@ -24,9 +24,75 @@
     <Compile Update="DatingPredictions.Tests\UnitTest1.cs">
       <Link>TestUnits\UnitTest1.cs</Link>
     </Compile>
+    <Compile Update="DatingPredictions.Web\Program.cs">
+      <Link>BlazorApp1\Program.cs</Link>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.3" />
     <PackageReference Include="Moq" Version="4.20.72" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DatingPredictions.Web\Layout\NavMenu.razor.css">
+      <Link>BlazorApp1\Layout\NavMenu.razor.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\Layout\MainLayout.razor.css">
+      <Link>BlazorApp1\Layout\MainLayout.razor.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\css\app.css">
+      <Link>BlazorApp1\wwwroot\css\app.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\js\bootstrap.js</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\css\bootstrap.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css">
+      <Link>BlazorApp1\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\index.html">
+      <Link>BlazorApp1\wwwroot\index.html</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\favicon.png">
+      <Link>BlazorApp1\wwwroot\favicon.png</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\sample-data\weather.json">
+      <Link>BlazorApp1\wwwroot\sample-data\weather.json</Link>
+    </None>
+    <None Update="DatingPredictions.Web\wwwroot\icon-192.png">
+      <Link>BlazorApp1\wwwroot\icon-192.png</Link>
+    </None>
+    <None Update="DatingPredictions.Web\Properties\launchSettings.json">
+      <Link>BlazorApp1\Properties\launchSettings.json</Link>
+    </None>
   </ItemGroup>
 </Project>
